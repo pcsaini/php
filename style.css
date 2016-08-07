@@ -1,0 +1,54 @@
+body{
+	background: #cccccc;
+}
+
+/*Login Page start*/
+.login-box{
+	margin: auto;
+	background: #fff;
+	margin-top: 10%;
+	width: 400px;
+	border-radius: 10px;
+	border: 1px solid #cccccc;
+}
+.login-box .title{
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background: #ececec;
+	font-size: 18pt;
+	font-weight: 600;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #666666;
+}
+.login-box .content{
+	padding: 20px 50px;
+	color: #666666;
+}
+.login-box .content .username{
+	padding: 10px 0;
+	line-height: 1.5;
+}
+.login-box .content input[type="email"],
+.login-box .content input[type="password"]{
+	padding: 8px;
+	width: 100%;
+	font-size: 12pt;
+}
+.login-box .content button{
+	padding: 8px;
+	margin-top: 20px;
+	background: #339933;
+	font-size: 12pt;
+	border: none;
+	width: 107%;
+	color: #fff;
+}
+
+@media only screen and (max-width: 768px){
+	.login-box{
+		width: 100%;
+	}
+}
