@@ -1,6 +1,9 @@
 body{
 	background: #cccccc;
 }
+a{
+	text-decoration: none;
+}
 
 /*Login Page start*/
 .login-box{
@@ -26,6 +29,7 @@ body{
 .login-box .content{
 	padding: 20px 50px;
 	color: #666666;
+	font-family: Verdana, Geneva, sans-serif;
 }
 .login-box .content .username{
 	padding: 10px 0;
