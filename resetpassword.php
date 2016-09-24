@@ -13,13 +13,12 @@
 </div>
 <div class="form-content">
     <div class="form">
-        <h2>Login</h2>
-        <form action="" method="post">
-            <input type="text" placeholder="Username"/>
+        <h2>Reset Password</h2>
+        <form action="resetpassword.php" method="post">
             <input type="password" placeholder="Password"/>
-            <button>Login</button>
+            <input type="password" placeholder="Confirm Password"/>
+            <button>Reset Password</button>
         </form>
-        <div class="cta"><a href="forgotpassword.php">Forgot your password?</a></div>
     </div>
 </div>
 </body>
