@@ -16,12 +16,13 @@
 </div>
 <div class="form-content">
     <div class="form">
-        <h2>Forgot Password</h2>
+        <h2>Change Password</h2>
         <form action="" method="post">
-            <input type="email" placeholder="Email Address"/>
-            <button>Submit</button>
+            <input type="password" placeholder="Current Password"/>
+            <input type="password" placeholder="New Password"/>
+            <input type="password" placeholder="Confirm Password"/>
+            <button>Change Password</button>
         </form>
-        <div class="cta"><a href="login.php">Back to Login</a></div>
     </div>
 </div>
 </body>

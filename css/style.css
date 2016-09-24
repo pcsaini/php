@@ -80,3 +80,9 @@ body {
     color: #333333;
     text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+    body{
+        padding: 10px;
+    }
+}
