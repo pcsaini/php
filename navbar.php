@@ -1,38 +1,35 @@
-<header>
-
+<nav class="navbar navbar-static-top">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-                <div class="menu-logo">
-                    <div class="navbar-header">
-                        <img src="image/logo.png">
-                    </div>
-                    <!--<h2>Online Library System</h2>-->
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 text-center">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <nav class="primary-menu">
-                        <ul class="nav navbar-nav navbar-right" id="nav">
-                            <li class="current smoot-menu"><a href="#home">Home</a></li>
-                            <li class="smoot-menu"><a href="#about">About</a></li>
-                            <li class="smoot-menu"><a href="#skill">SKILL</a></li>
-                            <li class="smoot-menu"><a href="#education">EDUACTION & EXPERIENCE</a></li>
-                            <li class="smoot-menu"><a href="#protfolio">PROTFOLIO</a></li>
-                            <li class="smoot-menu"><a href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-            </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar6">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-hide" href="#">Brand Text
+            </a>
         </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
     </div>
-</header>
+    <!--/.container-fluid -->
+</nav>

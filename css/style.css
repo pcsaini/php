@@ -89,31 +89,10 @@ body {
 
 
 /* Navigation Bar */
-header{
-    width:auto;
-    height: 50px;
-    background-color: #33b5e5;
+.navbar{
+    background-color:#33b5e5;
 }
-.menu-logo{
-    margin: auto;
-}
-.menu-logo h2{
-    padding: 10px;
-    margin: auto;
-    font-size: 25px;
-    font-weight: 900;
-}
-@media screen and (max-width: 768px){
-    .menu-logo{
-        float: left;
-    }
-    .navbar-toggle{
-        float: right;
-    }
-    .navbar-header img{
-        width: 40px;
-    }
-    .navbar-toggle .icon-bar{
-        background-color: #fff;
-    }
+.navbar-brand{
+    /*background: url(http://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center / contain no-repeat;*/
+    width: 200px;
 }
