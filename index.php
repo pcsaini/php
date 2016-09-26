@@ -12,16 +12,16 @@
 </head>
 <body>
 <?php
+    include_once "core/init.php";
     include_once "navbar.php";
 ?>
 
-<h1>Welcome to home</h1>
-<h1>Welcome to home</h1>
+<div class="container">
+    <h2>
+        Hello Prem, Welcome back.
+    </h2>
+</div>
 
-
-
-    <!--<script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.1.1.min.js"></script>-->
 <script src='js/jquery-3.1.1.min.js'></script>
 <script src='bootstrap/js/bootstrap.min.js'></script>
 </body>
