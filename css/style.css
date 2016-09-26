@@ -143,6 +143,13 @@ body::-webkit-scrollbar-thumb {
 .navbar{
     background-color:#95c3e9;
 }
+.navbar-toggle{
+    border-color: #16456c !important;
+}
+.navbar-toggle .icon-bar{
+    background-color: #16456c;
+}
+
 .navbar-brand{
     background: url(../image/logo_name.png) center / contain no-repeat;
     width: 200px;

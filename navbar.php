@@ -4,7 +4,7 @@ if (loggedin()){
     <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar6">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -13,7 +13,7 @@ if (loggedin()){
                 <a class="navbar-brand text-hide" href="login.php">Logo
                 </a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse ">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="login.php">Home</a></li>
                     <li><a href="books.php">Books</a></li>
@@ -37,7 +37,7 @@ else{
     <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar6">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -46,7 +46,7 @@ else{
                 <a class="navbar-brand text-hide" href="login.php">Logo
                 </a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i>
                             Home</a></li>
