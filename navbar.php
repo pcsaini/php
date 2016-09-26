@@ -48,7 +48,7 @@ else{
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="login.php">Home</a></li>
+                    <li class="active"><a href="index.php">Home</a></li>
                     <li><a href="books.php">Books</a></li>
                     <li><a href="contact.php">Contact us</a></li>
                     <li><a href="login.php">Login</a></li>

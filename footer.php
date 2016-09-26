@@ -10,7 +10,8 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="footerWidget">
-                        <ul>
+                        <h3>Links</h3>
+                        <ul class="footerMenu">
                             <li><a>Home</a></li>
                             <li><a>Home</a></li>
                             <li><a>Home</a></li>
@@ -20,7 +21,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="footerWidget">
-                        <h3>Follow us, we are social</h3>
+                        <h3>Social Links</h3>
                         <ul class="socialNetwork">
                             <li><a href="#" title="follow me on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
                         </ul>
