@@ -20,8 +20,11 @@
     <h2>
         Hello Prem, Welcome back.
     </h2>
+    <img src="image/logo.png">
 </div>
-
+<?php
+    include_once "footer.php";
+?>
 <script src='js/jquery-3.1.1.min.js'></script>
 <script src='bootstrap/js/bootstrap.min.js'></script>
 </body>

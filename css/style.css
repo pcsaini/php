@@ -93,6 +93,17 @@ body {
     background-color:#33b5e5;
 }
 .navbar-brand{
-    background: url(../image/logo.png) center / contain no-repeat;
+    background: url(../image/logo_name.png) center / contain no-repeat;
     width: 200px;
 }
+
+/* Footer  */
+footer{
+    height: auto;
+    background-color: #33B5E5;
+
+}
+#mainFooter{
+    padding: 20px;
+}
+
