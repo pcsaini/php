@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
 <?php
@@ -25,7 +26,7 @@
 <?php
     include_once "footer.php";
 ?>
-<script src='js/jquery-3.1.1.min.js'></script>
-<script src='bootstrap/js/bootstrap.min.js'></script>
+    <script src='js/jquery-3.1.1.min.js'></script>
+    <script src='bootstrap/js/bootstrap.min.js'></script>
 </body>
 </html>

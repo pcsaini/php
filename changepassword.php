@@ -8,6 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
 <body>
@@ -18,10 +19,11 @@
     <div class="form">
         <h2>Change Password</h2>
         <form action="" method="post">
-            <input type="password" placeholder="Current Password"/>
-            <input type="password" placeholder="New Password"/>
-            <input type="password" placeholder="Confirm Password"/>
-            <button>Change Password</button>
+            <input type="password" placeholder="Current Password" id="password"/>
+            <input type="password" placeholder="New Password" id="password"/>
+            <input type="password" placeholder="Confirm Password" id="password"/>
+            <button><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                Change Password</button>
         </form>
     </div>
 </div>

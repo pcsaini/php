@@ -8,6 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
 <body>
@@ -18,10 +19,12 @@
     <div class="form">
         <h2>Forgot Password</h2>
         <form action="" method="post">
-            <input type="email" placeholder="Email Address"/>
-            <button>Submit</button>
+            <input type="email" placeholder="Email Address" id="email"/>
+            <button><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                 Submit</button>
         </form>
-        <div class="cta"><a href="login.php">Back to Login</a></div>
+        <div class="cta"><a href="login.php"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                Back to Login</a></div>
     </div>
 </div>
 </body>

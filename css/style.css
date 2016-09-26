@@ -6,11 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body::-webkit-scrollbar {
+/* Scrollbar  */
+body::-webkit-scrollbar{
     width: 10px;
     background-color: transparent;
 }
-
 body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
@@ -54,13 +54,48 @@ body::-webkit-scrollbar-thumb {
     outline: none;
     display: block;
     width: 100%;
+    height: 42px;
     border: 1px solid #16456c;
     margin: 0 0 20px;
-    padding: 10px 15px;
+    padding: 0 20px 0 50px;
     box-sizing: border-box;
     font-wieght: 400;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
+}
+.form input#username {
+    background: #fff url('../image/user.png') 20px no-repeat;
+    background-size: 16px 16px;
+    color: #16456c;
+}
+
+.form input#username:focus {
+    background: #fff url('../image/user.png') 20px no-repeat;
+    background-size: 14px 14px;
+    color: #16456c;
+}
+
+.form input#password {
+    background: #fff url('../image/locked.png') 20px no-repeat;
+    background-size: 16px 16px;
+    color: #16456c;
+}
+
+.form input#password:focus {
+    background: #fff url('../image/locked.png') 20px no-repeat;
+    background-size: 14px 14px;
+    color: #16456c;
+}
+.form input#email {
+    background: #fff url('../image/mail.png') 20px no-repeat;
+    background-size: 16px 16px;
+    color: #16456c;
+}
+
+.form input#email:focus {
+    background: #fff url('../image/mail.png') 20px no-repeat;
+    background-size: 14px 14px;
+    color: #16456c;
 }
 .form input:focus {
     border: 1px solid #16456c;
@@ -112,12 +147,12 @@ body::-webkit-scrollbar-thumb {
     background: url(../image/logo_name.png) center / contain no-repeat;
     width: 200px;
 }
-.nav>li.active{
+/*.nav>li.active{
     background-color: #1e5f94 !important;
 }
 .nav>li.active a{
     color: #fff;
-}
+}*/
 .nav>li>a:focus, .nav>li>a:hover{
     background-color: #16456c !important;
     color: #fff !important;
