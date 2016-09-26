@@ -5,7 +5,7 @@
                 <div class="col-sm-6">
                     <div class="footerWidget">
                         <img src="image/logo_name.png" alt="logo" id="footerLogo">
-                        <p><a href="" title="">Little Neko</a> is a web design and development studio. We build responsive HTML5 and CSS3 templates, integrating best web design practices and up-to-date web technologies to create great user experiences. We love what we do and we hope you do too! </p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -33,8 +33,8 @@
     <section id="footerRights">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <p>Copyright © 2014 <a href="http://www.little-neko.com" target="blank">Little NEKO</a> / All rights reserved.</p>
+                <div class="col-md-12 text-center">
+                    <p>Copyright © 2016 Library / All rights reserved.</p>
                 </div>
 
             </div>

@@ -159,7 +159,7 @@ body::-webkit-scrollbar-thumb {
 
 }
 .navbar-nav li a{
-    color: #000;
+    color: #16456c;
     font-weight: 700;
 }
 
@@ -182,3 +182,13 @@ ul.footerMenu li a{
     text-decoration: none;
 
 }
+.main-content{
+    margin: auto;
+    margin-top: 50px;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
