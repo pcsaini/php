@@ -40,22 +40,30 @@
             <div class="row">
                 <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3">
                     <div class="quarter">
-                        <i class="fa fa-book fa-3x fa-align-left"></i><span class="number">25</span> <br/><br/><span>Most issued Books</span>
+                        <i class="fa fa-book fa-3x fa-align-left"></i>
+                        <span class="number">1255</span> <br/><br/>
+                        <span>Total Books</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3">
                     <div class="quarter">
-                        <i class="fa fa-book fa-3x fa-align-left"></i><span class="number">25</span> <br/><br/><span>Most issued Books</span>
+                        <i class="fa fa-book fa-3x fa-align-left"></i>
+                        <span class="number">325</span> <br/><br/>
+                        <span>Total Student</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3">
                     <div class="quarter">
-                        <i class="fa fa-book fa-3x fa-align-left"></i><span class="number">25</span> <br><br/><span>Most issued Books</span>
+                        <i class="fa fa-book fa-3x fa-align-left"></i>
+                        <span class="number">25</span> <br><br/>
+                        <span>Recently added Books</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3">
                     <div class="quarter">
-                        <i class="fa fa-book fa-3x fa-align-left"></i><span class="number">25</span> <br><br/><span>Most issued Books</span>
+                        <i class="fa fa-book fa-3x fa-align-left"></i>
+                        <span class="number">15</span> <br><br/>
+                        <span>Most issued Books</span>
                     </div>
                 </div>
             </div>

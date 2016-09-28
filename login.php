@@ -8,10 +8,15 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
 <body>
+<?php
+    include_once "core/init.php";
+    include_once "navbar.php"
+?>
 <div class="login-logo">
     <img src="image/logo.png">
 </div>

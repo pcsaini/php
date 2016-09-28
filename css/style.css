@@ -1,8 +1,7 @@
 body {
-  background: #e9e9e9;
-  color: #666666;
+  background: #e9e9e9 !important;
+  color: #666666 !important;
   font-family: 'RobotoDraft', 'Roboto', sans-serif;
-  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,7 +22,7 @@ body::-webkit-scrollbar-thumb {
 /* general css*/
 h2{
     color: #16456c;
-    font-weight: 700;
+    font-weight: 900;
 }
 .btn-1{
     padding: 10px 20px;
@@ -39,7 +38,7 @@ h2{
 
 /* Form  */
 .login-logo{
-    margin: 50px;
+    margin: 70px;
     text-align: center;
 }
 .login-logo img{
