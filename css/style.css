@@ -20,7 +20,11 @@ body::-webkit-scrollbar-thumb {
     background-color: #2e6da4;
     outline: 1px solid #5bc0de;
 }
-/* Button*/
+/* general css*/
+h2{
+    color: #16456c;
+    font-weight: 700;
+}
 .btn-1{
     padding: 10px 20px;
     background-color: #FFFFFF;
@@ -254,3 +258,30 @@ ul.footerMenu li a{
     padding:10px 20px;
 }
 
+/* about section*/
+
+
+/* Activities Section*/
+.activities{
+    margin-bottom: 20px;
+}
+.quarter{
+    color: #FFFFFF;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    background-color: #16456c;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.quarter .number{
+    font-size: 30px;
+    float: right;
+}
+.quarter:hover{
+    box-shadow: 1px 5px 10px #888888;
+}
+.quarter span{
+    font-size: 18px;
+
+}
