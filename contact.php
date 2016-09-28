@@ -16,12 +16,31 @@
 include_once "core/init.php";
 include_once "navbar.php";
 ?>
+<div class="main-content">
+    <div class="container">
+        <div class="contact-form">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-8">
+                        <h3 class="text-center">Any Question? Drop us a note</h3>
+                        <form>
+                            <input type="text" placeholder="Name">
+                            <input type="email" placeholder="Email-id">
+                            <input type="text" placeholder="Subject">
+                            <textarea placeholder="Message" rows="6"></textarea>
+                            <button class="btn-1" type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-2">
+                    </div>
+                </div>
+            </div>
 
-<div class="container">
-    <h2>
-        Hello Prem, Welcome back.
-    </h2>
-    <img src="image/logo.png">
+        </div>
+    </div>
 </div>
 <?php
 include_once "footer.php";

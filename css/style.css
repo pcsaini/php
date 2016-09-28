@@ -20,6 +20,18 @@ body::-webkit-scrollbar-thumb {
     background-color: #2e6da4;
     outline: 1px solid #5bc0de;
 }
+/* Button*/
+.btn-1{
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: #16456c;
+    border: 2px solid #16456c;
+}
+.btn-1:hover{
+    color: #FFFFFF;
+    background-color: #16456c;
+    border: 2px solid #16456c;
+}
 
 /* Form  */
 .login-logo{
@@ -211,4 +223,34 @@ ul.footerMenu li a{
     border: 1px solid #000;
 }
 
+/*Contact Form*/
+.contact-form{
+    margin-bottom: 20px;
+}
+.contact-form h2{
+    font-weight: 700;
+}
+.contact-form form{
+    text-align: center;
+}
+.contact-form form input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+}
+.contact-form form input:focus{
+    border-color: #0d293f;
+}
+.contact-form form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+.contact-form form textarea:focus{
+    border-color: #0d293f;
+}
+.contact-form form button{
+    margin: 10px 0;
+    padding:10px 20px;
+}
 
