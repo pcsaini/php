@@ -189,6 +189,7 @@ ul.footerMenu li a{
     text-decoration: none;
 
 }
+/*Main Body*/
 .main-content{
     margin: auto;
     margin-top: 50px;
@@ -196,6 +197,18 @@ ul.footerMenu li a{
 #owl-demo .item img{
     display: block;
     width: 100%;
-    height: auto;
+    height:auto;
 }
+.owl-theme .owl-controls .owl-pagination{
+    margin-top: -40px !important;
+}
+.owl-theme .owl-controls .owl-buttons{
+    visibility: hidden !important;
+    height: 0px;
+}
+.owl-theme .owl-controls .owl-page span{
+    background-color: #FFFFFF !important;
+    border: 1px solid #000;
+}
+
 

@@ -24,9 +24,9 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <div id="owl-demo" class="owl-carousel">
-                <div class="item"><img src="image/temp/fullimage1.jpg" alt="The Last of us"></div>
-                <div class="item"><img src="image/temp/fullimage2.jpg" alt="GTA V"></div>
-                <div class="item"><img src="image/temp/fullimage3.jpg" alt="Mirror Edge"></div>
+                <div class="item"><img src="image/library/library_1.jpg" alt="Library Image"></div>
+                <div class="item"><img src="image/library/library_2.jpg" alt="Library Image"></div>
+                <div class="item"><img src="image/library/library_3.jpg" alt="Library Image"></div>
             </div>
         </div>
     </div>
