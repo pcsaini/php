@@ -31,5 +31,8 @@
         <div class="cta"><a href="forgotpassword.php"><i class="fa fa-info-circle"></i> Forgot your password?</a></div>
     </div>
 </div>
+<script src='js/jquery-3.1.1.min.js'></script>
+<script src='bootstrap/js/bootstrap.min.js'></script>
+<script src="js/main.js"></script>
 </body>
 </html>
