@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="image/logo.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="image/logo.ico">
+    <link rel="apple-touch-icon" href="dashboard/assets/image/logo.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="dashboard/assets/image/logo.ico">
     <title>Library: Home</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="dashboard/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dashboard/assets/css/font-awesome.min.css">
     <!-- Owl Carousel Assets -->
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
@@ -40,28 +40,28 @@
             <div class="row">
                 <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3">
                     <div class="quarter">
-                        <i class="fa fa-book fa-3x fa-align-left"></i>
+                        <i class="fa fa-book fa-3x fa-align-right"></i>
                         <span class="number">1255</span> <br/><br/>
                         <span>Total Books</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3">
                     <div class="quarter">
-                        <i class="fa fa-book fa-3x fa-align-left"></i>
+                        <i class="fa fa-user fa-3x"></i>
                         <span class="number">325</span> <br/><br/>
                         <span>Total Student</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3">
                     <div class="quarter">
-                        <i class="fa fa-book fa-3x fa-align-left"></i>
+                        <i class="fa fa-book fa-3x"></i>
                         <span class="number">25</span> <br><br/>
                         <span>Recently added Books</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-3 col-sm-12 col-lg-3">
                     <div class="quarter">
-                        <i class="fa fa-book fa-3x fa-align-left"></i>
+                        <i class="fa fa-book fa-3x"></i>
                         <span class="number">15</span> <br><br/>
                         <span>Most issued Books</span>
                     </div>
@@ -75,8 +75,8 @@
     include_once "footer.php";
 ?>
 
-    <script src='js/jquery-3.1.1.min.js'></script>
-    <script src='bootstrap/js/bootstrap.min.js'></script>
+    <script src='dashboard/assets/js/jquery-3.1.1.min.js'></script>
+    <script src='dashboard/assets/js/bootstrap.min.js'></script>
     <script src='owl-carousel/owl.carousel.min.js'></script>
     <script src="js/main.js"></script>
 </body>

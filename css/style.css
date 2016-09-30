@@ -166,7 +166,7 @@ h2{
 }
 
 .navbar-brand{
-    background: url(../image/logo_name.png) center / contain no-repeat;
+    background: url(../dashboard/assets/image/logo_name.png) center / contain no-repeat;
     width: 200px;
 }
 /*.nav>li.active{
