@@ -1,6 +1,7 @@
 body{
     margin: auto;
 }
+/*Navigation bar setting*/
 .navbar .navbar-expand-toggle{
     width: 60px;
     height: 60px;
@@ -45,4 +46,14 @@ body{
 }
 .navbar .navbar-right-expand-toggle .icon {
     font-size: 1.4em;
+}
+.navbar .dropdown-menu {
+    padding: 0;
+    border: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
+    z-index: -1;
+    position: absolute;
 }
