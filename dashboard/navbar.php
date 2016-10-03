@@ -1,102 +1,101 @@
-<nav class="navbar-default navbar-static-top" role="navigation">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-
-        <h1> <a class="navbar-brand" href="index.html">Minimal</a></h1>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-expand-toggle">
+                <i class="fa fa-bars icon"></i>
+            </button>
+            <ol class="breadcrumb navbar-breadcrumb">
+                <li class="active">Dashboard</li>
+            </ol>
+            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                <i class="fa fa-th icon"></i>
+            </button>
+        </div>
     </div>
-        <div class="border-bottom">
-            <div class="full-left">
-                <section class="full-top">
-                    <button id="toggle"><i class="fa fa-arrows-alt"></i></button>
-                </section>
-                <form class=" navbar-left-right">
-                    <input type="text"  value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
-                    <input type="submit" value="" class="fa fa-search">
-                </form>
-                <div class="clearfix"> </div>
-            </div>
-            <div class="drop-men" >
-                <ul class=" nav_1">
-                    <li class="dropdown at-drop">
-                        <a href="#" class="dropdown-toggle dropdown-at " data-toggle="dropdown"><i class="fa fa-globe"></i> <span class="number">5</span></a>
-                        <ul class="dropdown-menu menu1 " role="menu">
-                            <li><a href="#">
-
-                                    <div class="user-new">
-                                        <p>New user registered</p>
-                                        <span>40 seconds ago</span>
-                                    </div>
-                                    <div class="user-new-left">
-
-                                        <i class="fa fa-user-plus"></i>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </a></li>
-                            <li><a href="#">
-                                    <div class="user-new">
-                                        <p>Someone special liked this</p>
-                                        <span>3 minutes ago</span>
-                                    </div>
-                                    <div class="user-new-left">
-
-                                        <i class="fa fa-heart"></i>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </a></li>
-                            <li><a href="#">
-                                    <div class="user-new">
-                                        <p>John cancelled the event</p>
-                                        <span>4 hours ago</span>
-                                    </div>
-                                    <div class="user-new-left">
-
-                                        <i class="fa fa-times"></i>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </a></li>
-                            <li><a href="#">
-                                    <div class="user-new">
-                                        <p>The server is status is stable</p>
-                                        <span>yesterday at 08:30am</span>
-                                    </div>
-                                    <div class="user-new-left">
-
-                                        <i class="fa fa-info"></i>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </a></li>
-                            <li><a href="#">
-                                    <div class="user-new">
-                                        <p>New comments waiting approval</p>
-                                        <span>Last Week</span>
-                                    </div>
-                                    <div class="user-new-left">
-
-                                        <i class="fa fa-rss"></i>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </a></li>
-                            <li><a href="#" class="view">View all messages</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/wo.jpg"></a>
-                        <ul class="dropdown-menu " role="menu">
-                            <li><a href="profile.html"><i class="fa fa-user"></i>Edit Profile</a></li>
-                            <li><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox</a></li>
-                            <li><a href="calendar.html"><i class="fa fa-calendar"></i>Calender</a></li>
-                            <li><a href="inbox.html"><i class="fa fa-clipboard"></i>Tasks</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="clearfix">
-
-            </div>
 </nav>
+
+
+
+
+
+<!--<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-expand-toggle">
+                <i class="fa fa-bars icon"></i>
+            </button>
+            <ol class="breadcrumb navbar-breadcrumb">
+                <li class="active">Dashboard</li>
+            </ol>
+            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                <i class="fa fa-th icon"></i>
+            </button>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                <i class="fa fa-times icon"></i>
+            </button>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-comments-o"></i></a>
+                <ul class="dropdown-menu animated fadeInDown">
+                    <li class="title">
+                        Notification <span class="badge pull-right">0</span>
+                    </li>
+                    <li class="message">
+                        No new notification
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown danger">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-star-half-o"></i> 4</a>
+                <ul class="dropdown-menu danger  animated fadeInDown">
+                    <li class="title">
+                        Notification <span class="badge pull-right">4</span>
+                    </li>
+                    <li>
+                        <ul class="list-group notifications">
+                            <a href="#">
+                                <li class="list-group-item">
+                                    <span class="badge">1</span> <i class="fa fa-exclamation-circle icon"></i> new registration
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li class="list-group-item">
+                                    <span class="badge success">1</span> <i class="fa fa-check icon"></i> new orders
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li class="list-group-item">
+                                    <span class="badge danger">2</span> <i class="fa fa-comments icon"></i> customers messages
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li class="list-group-item message">
+                                    view all
+                                </li>
+                            </a>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown profile">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Emily Hart <span class="caret"></span></a>
+                <ul class="dropdown-menu animated fadeInDown">
+                    <li class="profile-img">
+                        <img src="../img/profile/picjumbo.com_HNCK4153_resize.jpg" class="profile-img">
+                    </li>
+                    <li>
+                        <div class="profile-info">
+                            <h4 class="username">Emily Hart</h4>
+                            <p>emily_hart@email.com</p>
+                            <div class="btn-group margin-bottom-2x" role="group">
+                                <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
+                                <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>-->

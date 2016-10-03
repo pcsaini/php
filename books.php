@@ -10,20 +10,30 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="dashboard/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="dashboard/assets/css/font-awesome.min.css">
+    <!-- Owl Carousel Assets -->
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
 </head>
 <body>
 <?php
 include_once "core/init.php";
 include_once "navbar.php";
 ?>
-
-<div class="container">
-    <
+<div class="main-content">
+    <div class="container">
+        <div class="search-bar">
+            <h3>Search Here!</h3>
+            <input type="text" name="search" placeholder="Search..">
+        </div>
+    </div>
 </div>
+
 <?php
 include_once "footer.php";
 ?>
 <script src='dashboard/assets/js/jquery-3.1.1.min.js'></script>
 <script src='dashboard/assets/js/bootstrap.min.js'></script>
+<script src='owl-carousel/owl.carousel.min.js'></script>
+<script src="js/main.js"></script>
 </body>
 </html>
