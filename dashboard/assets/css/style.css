@@ -29,7 +29,6 @@ body{
     height: 60px;
     line-height: 60px;
     vertical-align: middle;
-    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.5em;
 }
 .navbar .navbar-right-expand-toggle {
@@ -56,4 +55,88 @@ body{
     -webkit-animation-duration: 0.4s;
     z-index: -1;
     position: absolute;
+}
+.navbar .dropdown-menu .title{
+    padding: 5px 10px;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.navbar .dropdown-menu .message {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    padding: 10px 20px;
+}
+.navbar .navbar-nav > li.danger > a{
+    background-color: transparent;
+    border-bottom: 4px solid #FA2A00;
+    color: #FA2A00;
+}
+.navbar .navbar-nav > li > a{
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 20px 0px 20px;
+}
+.navbar .navbar-nav > li:hover > a{
+    color: #22A7F0;
+}
+.navbar .navbar-nav li UL.list-group a:hover{
+    text-decoration: none;
+}
+.navbar .navbar-nav .dropdown-menu.danger{
+    border-color: #FA2A00;
+}
+
+.navbar .dropdown-menu.danger .title{
+    background-color: #FA2A00;
+    color: #FFFFFF;
+}
+.navbar .dropdown-menu .notifications.list-group{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar .dropdown-menu .notifications.list-group .list-group-item {
+    min-width: 250px;
+    padding: 8px;
+    border: 0;
+    border-bottom: 1px solid #EEE;
+}
+.navbar .dropdown-menu .notifications.list-group .list-group-item .icon {
+    margin-right: 5px;
+}
+.navbar .dropdown-menu .notifications.list-group .badge {
+    border-radius: 1em;
+}
+.navbar .dropdown-menu .notifications.list-group .list-group-item:last-child {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.navbar .dropdown-menu .notifications.list-group .list-group-item:first-child {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.navbar .dropdown-menu .notifications.list-group a.list-group-item:hover {
+    cursor: pointer;
+}
+.navbar .dropdown.profile .dropdown-menu {
+    width: 305px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+.navbar .dropdown.profile .dropdown-menu li.profile-img {
+    padding: 50px;
+    max-height: 300px;
+    overflow: hidden; }
+.navbar .dropdown.profile .dropdown-menu li.profile-img img.profile-img {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    border: 0;
+}
+.navbar .dropdown.profile .dropdown-menu .profile-info {
+    padding: 15px;
+}
+.navbar .dropdown.profile .dropdown-menu .profile-info .username {
+    font-size: 1.8em;
 }
