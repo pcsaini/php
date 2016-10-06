@@ -63,30 +63,3 @@
     </div>
 </nav>
 
-
-
-
-
-<!--<nav class="navbar navbar-default navbar-fixed-top navbar-top">
-    <div class="container-fluid">
-            <li class="dropdown profile">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Emily Hart <span class="caret"></span></a>
-                <ul class="dropdown-menu animated fadeInDown">
-                    <li class="profile-img">
-                        <img src="../img/profile/picjumbo.com_HNCK4153_resize.jpg" class="profile-img">
-                    </li>
-                    <li>
-                        <div class="profile-info">
-                            <h4 class="username">Emily Hart</h4>
-                            <p>emily_hart@email.com</p>
-                            <div class="btn-group margin-bottom-2x" role="group">
-                                <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile</button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout</button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</nav>-->

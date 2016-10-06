@@ -13,11 +13,16 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
 </head>
 <body>
-<?php
-    include_once "navbar.php";
-    //include_once "header.php";
-    //include_once "footer.php";
-?>
+<div class="app-container">
+    <div class="row content-container">
+        <?php
+        include_once "navbar.php";
+        include_once "sidebar.php";
+        //include_once "footer.php";
+        ?>
+
+    </div>
+</div>
 
 
 
