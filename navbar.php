@@ -1,7 +1,7 @@
 <?php
-if (loggedin()){
+/*if (loggedin()){*/
     ?>
-    <nav class="navbar navbar-fixed-top">
+    <!--<nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -19,7 +19,7 @@ if (loggedin()){
                     <li><a href="books.php">Books</a></li>
                     <li><a href="contact.php">Contact us</a></li>
                     <li class="dropdown">
-                        <a href="login.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Logout<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Something else here</a></li>
                             <li class="divider"></li>
@@ -30,9 +30,9 @@ if (loggedin()){
             </div>
         </div>
     </nav>
-    <?php
-}
-else{
+    --><?php
+/*}
+else{*/
   ?>
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -59,6 +59,6 @@ else{
     </nav>
 
 <?php
-}
+//}
 ?>
 

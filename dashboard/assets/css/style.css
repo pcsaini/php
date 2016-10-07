@@ -1,5 +1,6 @@
 body{
     margin: auto;
+    color: #000000;
 }
 .app-container {
     min-height: 100%;
@@ -174,7 +175,7 @@ body{
 .app-container .content-container  .side-menu .navbar-header{
     width: 100%;
     border-bottom: 0px solid #e7e7e7;
-    background-color: #22A7F0;
+    background-color: #95c3e9;
     margin-bottom: 4px;
 }
 .app-container .content-container  .side-menu .navbar-header .navbar-brand{
@@ -192,9 +193,15 @@ body{
     text-align: center;
     display: inline-block;
 }
+.app-container .content-container .side-menu .navbar-header .navbar-brand .icon img{
+    width: 40px;
+}
 .app-container .content-container .side-menu .navbar-header .navbar-brand .title{
-    margin-left: -10px;
+    margin-left: 0px;
     display: none;
+}
+.app-container .content-container .side-menu .navbar-header .navbar-brand .title img{
+    width: 170px;
 }
 .app-container .content-container .side-menu .navbar-nav{
     width: 100%;
@@ -205,7 +212,7 @@ body{
     overflow: hidden;
 }
 .app-container .content-container .side-menu .navbar-nav li a .icon {
-    margin-left: -10px;
+    margin-left: 0px;
     width: 38px;
     text-align: center;
     font-size: 1.1em;

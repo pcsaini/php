@@ -3,8 +3,8 @@
         <div class="side-menu-container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
-                    <div class="fa fa-paper-plane icon"></div>
-                    <div class="title">Library</div>
+                    <div class="icon"><img src="assets/image/logo.png"></div>
+                    <div class="title"><img src="assets/image/logo_name.png"></div>
                 </a>
                 <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
                     <i class="fa fa-times icon"></i>
@@ -19,55 +19,50 @@
                 </li>
                 <li class="panel panel-default dropdown">
                     <a data-toggle="collapse" href="#dropdown-element">
-                        <span class="icon fa fa-desktop"></span>
-                        <span class="title">LINK - 1</span>
+                        <span class="icon fa fa-book"></span>
+                        <span class="title">Book</span>
                     </a>
                     <!--Dropdown -->
                     <div id="dropdown-element" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul class="nav navbar-nav">
-                                <li><a href="#">Sub-link 1</a></li>
-                                <li><a href="#">Sub-link 2</a></li>
-                                <li><a href="#">Sub-link 3</a></li>
-                                <li><a href="#">Sub-link 4</a></li>
+                                <li><a href="#">Book Category</a></li>
+                                <li><a href="#">Add New Book</a></li>
+                                <li><a href="#">Remove Book</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
                 <li class="panel panel-default dropdown">
                     <a data-toggle="collapse" href="#dropdown-element1">
-                        <span class="icon fa fa-desktop"></span>
-                        <span class="title">LINK - 2</span>
+                        <span class="icon fa fa-user"></span>
+                        <span class="title">Student</span>
                     </a>
                     <!--Dropdown -->
                     <div id="dropdown-element1" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul class="nav navbar-nav">
-                                <li><a href="#">Sub-link 1</a></li>
-                                <li><a href="#">Sub-link 2</a></li>
-                                <li><a href="#">Sub-link 3</a></li>
-                                <li><a href="#">Sub-link 4</a></li>
+                                <li><a href="#">Add Student</a></li>
+                                <li><a href="#">View Student</a></li>
+                                <li><a href="#">Remove Student</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
-                <li class="panel panel-default dropdown">
-                    <a data-toggle="collapse" href="#dropdown-element2">
-                        <span class="icon fa fa-desktop"></span>
-                        <span class="title">LINK - 3</span>
+                <li>
+                    <a href="#">
+                        <span class="icon fa fa-book fa-align-right"></span>
+                        <span class="title">Requested Books</span>
                     </a>
-                    <!--Dropdown -->
-                    <div id="dropdown-element2" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#">Sub-link 1</a></li>
-                                <li><a href="#">Sub-link 2</a></li>
-                                <li><a href="#">Sub-link 3</a></li>
-                                <li><a href="#">Sub-link 4</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </li>
+                <li>
+                    <a href="#">
+                        <span class="icon fa fa-pencil-square-o"></span>
+                        <span class="title">Rules</span>
+                    </a>
+                </li>
+
+
             </ul>
         </div>
     </nav>
