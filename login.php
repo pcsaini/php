@@ -23,10 +23,10 @@
 <div class="form-content">
     <div class="form">
         <h2>Login</h2>
-        <form action="" method="post">
-            <input type="text" placeholder="Username" id="username"/>
-            <input type="password" placeholder="Password" id="password"/>
-            <button><i class="fa fa-sign-in"></i> Login</button>
+        <form action="core/controller/login.php" method="post">
+            <input type="text" placeholder="Username" id="username" name="username"/>
+            <input type="password" placeholder="Password" id="password" name="password"/>
+            <button type="submit"><i class="fa fa-sign-in"></i> Login</button>
         </form>
         <div class="cta"><a href="forgotpassword.php"><i class="fa fa-info-circle"></i> Forgot your password?</a></div>
     </div>

@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php
-include_once "core/init.php";
+
 include_once "navbar.php";
 ?>
 <div class="main-content">

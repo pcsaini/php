@@ -1,24 +1,18 @@
 <?php
+require '../database/helper.php';
+
 /**
- * Created by PhpStorm.
- * User: pcsaini779
- * Date: 07-10-2016
- * Time: 11:35 AM
+ * @param $username
+ * @param $password
+ * @param string $remember
+ * @return bool
  */
-class auth_model extends DBconfig {
-    public function __construct()
-    {
-        $connection = new DBconfig();
-        $this->connection = $connection->connectToDatabase();
-        $this->helper = new helper();
-    }
-    public function login($username,$password,$remember="0"){
-        $username = mysqli_real_escape_string($this->connection,$username);
-        $password = mysqli_real_escape_string($this->connection,$password);
-
-        $result = $this->helper->check("student", "WHERE username='$username' && password='$password'");
-        if ($result){
-
-        }
-    }
+function login($username, $password){
+    $username = mysql_real_escape_string($username);
+    $password = mysql_real_escape_string($password);
+    $result = check("users", $username, $password);
+    return $result;
+}
+function logged_in(){
+    return (isset($_SESSION['user_id'])) ? true : false;
 }
