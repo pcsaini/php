@@ -17,12 +17,6 @@
 <body>
 <?php
     include_once "core/init.php";
-if (logged_in()==1){
-    echo "hello";
-}
-else{
-    echo "23";
-}
     include_once "navbar.php";
 ?>
 

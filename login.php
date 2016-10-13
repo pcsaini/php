@@ -14,8 +14,8 @@
 
 <body>
 <?php
-    include_once "core/init.php";
-    include_once "navbar.php"
+include_once "core/init.php";
+include_once "navbar.php"
 ?>
 <div class="login-logo">
     <img src="dashboard/assets/image/logo.png">
