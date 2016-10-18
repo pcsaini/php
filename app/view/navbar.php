@@ -22,7 +22,7 @@ if (logged_in() == 1){
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout<span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">View Profile</a></li>
+                            <li><a href="account.php">View Profile</a></li>
                             <li><a href="profile.php">Profile Setting</a></li>
                             <li><a href="changepassword.php">Change Password</a></li>
                             <li><a href="logout.php">Logout</a></li>

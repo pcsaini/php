@@ -14,7 +14,7 @@
 
 <body>
 <?php
-
+include_once "../init.php";
 include_once "navbar.php"
 ?>
 <div class="login-logo">
