@@ -15,19 +15,7 @@ function login($username, $password)
     return $result;
 }
 
-//print_r($errors);
 function logged_in()
 {
-    //print_r($_SESSION['user_id']);
-    if (isset($_SESSION['user_id'])) {
-        return true;
-    } else {
-        return false;
-    }
-    //return (isset($_SESSION['user_id'])) ? true : false;
-}
-
-function delete()
-{
-    print_r("hello");
+    return (isset($_SESSION['user_id'])) ? true : false;
 }

@@ -145,14 +145,16 @@ h2{
     color: #16456c;
     text-decoration: none;
 }
-
+.form p.errors{
+    text-align: center;
+    color: red;
+}
 
 @media screen and (max-width: 768px) {
     body{
         padding: 10px;
     }
 }
-
 
 /* Navigation Bar */
 .navbar{

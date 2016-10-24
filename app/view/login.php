@@ -23,6 +23,18 @@ include_once "navbar.php"
 <div class="form-content">
     <div class="form">
         <h2>Login</h2>
+        <?php
+            if (isset($_GET['errors']) == true){
+                $errors = $_GET['errors'];
+                ?>
+                <p class="errors">
+                    <?php
+                    print_r($errors);
+                    ?>
+                </p>
+                <?php
+            }
+        ?>
         <form action="../controller/login.php" method="post">
             <input type="text" placeholder="Username" id="username" name="username"/>
             <input type="password" placeholder="Password" id="password" name="password"/>
