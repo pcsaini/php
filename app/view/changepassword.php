@@ -15,7 +15,7 @@
 <body>
 <?php
 include_once "../init.php";
-include_once "navbar.php"
+include_once "navbar.php";
 ?>
 <div class="login-logo">
     <img src="dashboard/assets/image/logo.png">
@@ -23,10 +23,22 @@ include_once "navbar.php"
 <div class="form-content">
     <div class="form">
         <h2>Change Password</h2>
-        <form action="" method="post">
-            <input type="password" placeholder="Current Password" id="password"/>
-            <input type="password" placeholder="New Password" id="password"/>
-            <input type="password" placeholder="Confirm Password" id="password"/>
+        <?php
+        if (isset($_GET['errors']) == true){
+            $errors = $_GET['errors'];
+            ?>
+            <p class="errors">
+                <?php
+                print_r($errors);
+                ?>
+            </p>
+            <?php
+        }
+        ?>
+        <form action="../controller/changepassword.php" method="post">
+            <input type="password" placeholder="Current Password" id="password" name="current_password" required/>
+            <input type="password" placeholder="New Password" id="password" name="new_password" required/>
+            <input type="password" placeholder="Confirm Password" id="password" name="new_password_again" required/>
             <button><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 Change Password</button>
         </form>
