@@ -67,3 +67,9 @@ function change_password($user_id, $new_password){
 
     mysql_query("UPDATE `users` SET `password` = '$new_password' WHERE `user_id` = $user_id");
 }
+function email_exists($email){
+    $email = strip_tags($email);
+    return (mysql_result(mysql_query("SELECT COUNT('user_id') FROM users WHERE email = '$email'  "), 0) == 1) ? true : false;
+}
+
+?>

@@ -14,6 +14,7 @@
 
 <body>
 <?php
+include_once "../init.php";
 include_once "navbar.php"
 ?>
 <div class="login-logo">
@@ -22,8 +23,23 @@ include_once "navbar.php"
 <div class="form-content">
     <div class="form">
         <h2>Forgot Password</h2>
-        <form action="" method="post">
-            <input type="email" placeholder="Email Address" id="email"/>
+        <?php
+        if (isset($_GET['errors']) == true){
+            $errors = $_GET['errors'];
+            ?>
+            <p class="errors">
+                <?php
+                print_r($errors);
+                ?>
+            </p>
+            <?php
+        }
+        if (isset($_GET['success']) && empty($_GET['success'])) {
+            echo "<p style='text-align: center;'>Thanks we've emailed you to recover password</p>";
+        }
+        ?>
+        <form action="../controller/forgotpassword.php" method="post">
+            <input type="email" placeholder="Email Address" id="email" name="email"/>
             <button><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                  Submit</button>
         </form>
