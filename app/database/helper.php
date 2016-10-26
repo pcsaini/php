@@ -61,3 +61,9 @@ function user_data($user_id){
         return $data;
     }
 }
+function change_password($user_id, $new_password){
+    $user_id = (int)$user_id;
+    $new_password = md5($new_password);
+
+    mysql_query("UPDATE `users` SET `password` = '$new_password' WHERE `user_id` = $user_id");
+}

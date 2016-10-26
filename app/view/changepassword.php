@@ -34,6 +34,9 @@ include_once "navbar.php";
             </p>
             <?php
         }
+        if (isset($_GET['success']) && empty($_GET['success'])) {
+            echo "<p style='text-align: center;'>Password Changed Suceessfully.</p>";
+        }
         ?>
         <form action="../controller/changepassword.php" method="post">
             <input type="password" placeholder="Current Password" id="password" name="current_password" required/>
