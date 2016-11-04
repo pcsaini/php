@@ -312,3 +312,33 @@ ul.footerMenu li a{
 .search-bar input[type=text]:focus {
     width: 100%;
 }
+
+/*  View Profile*/
+.profile-info{
+    margin: 10px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #adadad;
+}
+.profile-info .profile-pic{
+    text-align: center;
+}
+.profile-info .information{
+    text-align: center;
+}
+.history-info{
+    margin: 10px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #adadad;
+}
+/*  Profile Setting Page*/
+.main-heading{
+    margin-top: 50px;
+    padding: 10px;
+    text-align: center;
+    background-color:#16456c;
+}
+.main-heading h2{
+    color: #FFFFFF;
+}

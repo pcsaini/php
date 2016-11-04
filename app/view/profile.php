@@ -21,11 +21,11 @@
 include_once "../init.php";
 include_once "navbar.php";
 ?>
-<div class="jumbotron " style="padding-top:60px; background-color: #16456c; ">
-<center><h2 style="color: white;">  Account </h2> </center>
-    </div>
+<div class="main-heading">
+    <h2>Account Setting</h2>
+</div>
     
-<div class="container  " style="padding-top: 20px; ">
+<div class="container">
     <h1 class="page-header ">Edit Profile</h1>
     <div class="row">
         <!-- left column -->
@@ -86,7 +86,7 @@ include_once "navbar.php";
                 <div class="form-group">
                     <label class="col-md-3 control-label"></label>
                     <div class="col-md-8">
-                       <button class="btn-lg" style="background-color:#16456c; color:white" >Save changes </button>
+                        <button class="btn-lg" style="background-color:#16456c; color:white" >Save changes </button>
                         <span></span>
                         <button class="btn-lg" style="background-color:#16456c; color:white;" >Cancel </button>
                     </div>
