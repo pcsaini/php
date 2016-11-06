@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2016 at 08:59 AM
+-- Generation Time: Nov 06, 2016 at 04:07 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -69,6 +69,17 @@ INSERT INTO `book_category` (`book_category_id`, `book_category_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `book_code`
+--
+
+CREATE TABLE IF NOT EXISTS `book_code` (
+  `book_id` int(100) NOT NULL,
+  `book_code` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `issue_book`
 --
 
@@ -123,16 +134,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `gender` varchar(10) NOT NULL,
   `contact_number` bigint(20) NOT NULL,
   `profile_pic` varchar(32) NOT NULL,
-  `address` varchar(100) NOT NULL
+  `address` varchar(100) NOT NULL,
+  `registered_book` int(5) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `username`, `password`, `first_name`, `last_name`, `email`, `gender`, `contact_number`, `profile_pic`, `address`) VALUES
-(1, 'test', 'cc03e747a6afbbcbf8be7668acfebee5', 'test', '123', 'test@gmail.com', 'Male', 919887554425, '', 'Ahmedabad'),
-(2, 'pcsaini', '37a7e2cf07ff08f43e5cd844e567a23f', 'Prem Chand ', 'Saini', 'premchandsaini779@gmail.com', 'Male', 919887554425, '', '');
+INSERT INTO `users` (`user_id`, `username`, `password`, `first_name`, `last_name`, `email`, `gender`, `contact_number`, `profile_pic`, `address`, `registered_book`) VALUES
+(1, 'test', 'cc03e747a6afbbcbf8be7668acfebee5', 'test', '123', 'test@gmail.com', 'Male', 9887554425, '5.png', 'Ahmedabad', 2),
+(2, 'pcsaini', 'ff4e3b8f1c31b80faf1d87a8df848886', 'Prem Chand ', 'Saini', 'premchandsaini81@gmail.com', 'Male', 9887554425, 'cmy.png', 'IIIT Vadodara', 2);
 
 --
 -- Indexes for dumped tables

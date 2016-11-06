@@ -1,6 +1,6 @@
 <?php
-if (logged_in() == 1){
-    echo '<nav class="navbar navbar-fixed-top">
+if (logged_in() == 1){ ?>
+    <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -19,7 +19,7 @@ if (logged_in() == 1){
                     <li><a href="books.php"><i class="fa fa-book" aria-hidden="true"></i> Books</a></li>
                     <li><a href="contact.php"><i class="fa fa-phone-square" aria-hidden="true"></i> Contact us</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout<span
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> <?php echo $user_data['first_name']; ?><span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="account.php">View Profile</a></li>
@@ -31,11 +31,12 @@ if (logged_in() == 1){
                 </ul>
             </div>
         </div>
-    </nav>';
+    </nav>
+<?php
 }
-else{
-    echo '
-<nav class="navbar navbar-fixed-top">
+else {
+    ?>
+    <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -57,5 +58,7 @@ else{
                 </ul>
             </div>
         </div>
-    </nav>';
+    </nav>
+    <?php
 }
+?>

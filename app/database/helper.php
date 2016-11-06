@@ -71,5 +71,21 @@ function email_exists($email){
     $email = strip_tags($email);
     return (mysql_result(mysql_query("SELECT COUNT('user_id') FROM users WHERE email = '$email'  "), 0) == 1) ? true : false;
 }
+function insert_image($user_id,$file_name){
+    $user_id = (int)$user_id;
+    $file_name = trim($file_name);
+    mysql_query("UPDATE `users` SET `profile_pic` = '$file_name' WHERE `user_id` = $user_id");
+}
+function update_profile($user_id,$first_name,$last_name,$email,$contact_number,$address){
+    $user_id = (int)$user_id;
+    mysql_query("UPDATE `users` SET `first_name` = '$first_name',`last_name` = '$last_name',`email` = '$email',`contact_number` = '$contact_number',`address` = '$address'  WHERE `user_id` = $user_id");
 
+}
+function recover_password($email){
+    $email = trim($email);
+    $user_id = user_id_from_email($email);
+    $username = user_data($user_id,'username');
+    $generate_password = substr(md5(rand(999,99999)),0,8);
+    mail($email,'Reset Password',"Hello ". $username.",\n Please go to above link to reset password :\n http://library.freeoda.com/app/view/resetpassword.php?email=".$email."&generate_password=".$generate_password."  \n\n  -Library",'From:premchandsaini779@gmail.com');
+}
 ?>
