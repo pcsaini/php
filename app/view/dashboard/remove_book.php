@@ -21,7 +21,12 @@
         //include_once "footer.php";
         ?>
         <div class="main-content">
-            Hello Main Content
+            <form action="add_category.php" method="post">
+                <label>:</label>
+                <input type="text" name="isbn" />
+                <label>N</label>
+            </form>
+
         </div>
 
     </div>
