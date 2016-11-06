@@ -16,7 +16,7 @@
 <?php
 include_once "../init.php";
 include_once "navbar.php";
-protact_page();
+login_redirect();
 ?>
 <div class="login-logo">
     <img src="dashboard/assets/image/logo.png">

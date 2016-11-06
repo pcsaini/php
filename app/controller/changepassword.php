@@ -2,13 +2,6 @@
 require "../init.php";
 //require "../database/helper.php";
 
-
-/*if (logged_in() === true) {
-    $session_user_id = $_SESSION['user_id'];
-    $user_data = user_data($session_user_id,'user_id','username','password','name','email');
-    //print_r($user_data);
-}*/
-
 if (empty($_POST)===false){
     if (md5($_POST['current_password']) === $user_data['password']){
         if (trim($_POST['new_password']) !== trim($_POST['new_password_again'])){
