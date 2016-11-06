@@ -24,30 +24,102 @@ include_once "navbar.php";
 </div>
 
 <div class="container">
-    <div class="row">
+    <div class="row profile">
         <!-- left column -->
         <div class="col-md-3 col-sm-6 col-xs-12 profile-info">
-            <div class="profile-pic">
-                <img src="image/5.png" class="avatar img-circle img-thumbnail" alt="avatar" style="height: 150px;width: auto;" / >
-            </div>
-            <div class="information">
-                <h3 class="full-name">Prem Chand Saini</h3>
-                <h4 class="username">pcsaini</h4>
-                <p class="mailid">premchandsaini779@gmail.com</p>
-                <button class="btn-lg" style="background-color:#16456c; color:white;width: 50% " >Edit Profile</button>
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">Profile</div>
+                <div class="panel-body">
+                    <div class="profile-pic">
+                        <img src="image/5.png" class="avatar img-circle img-thumbnail" alt="avatar" style="height: 150px;width: auto;" / >
+                    </div>
+                    <hr id="line">
+                    <div class="information">
+                        <h3 class="full-name">Prem Chand Saini</h3>
+                        <h4 class="username">pcsaini</h4>
+                        <p class="mail-id">premchandsaini779@gmail.com</p>
+                        <a href="profile.php"><button class="btn">Edit Profile</button></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-8 col-sm-6 col-xs-12 history-info">
-            <div class="issued-book-info">
-                <div class="panel-group">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">Panel Heading</div>
-                        <div class="panel-body">Panel Content</div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">Panel Heading</div>
-                        <div class="panel-body">Panel Content</div>
-                    </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Issued Book</div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-responsive">
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Book Name</th>
+                            <th>Issue Date</th>
+                            <th>Return Date</th>
+                            <th>Fine</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Book Name XYZ</td>
+                            <td>24-10-2016</td>
+                            <td>29-10-2016</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Book History</div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-responsive">
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Book Name</th>
+                            <th>Issue Date</th>
+                            <th>Return Date</th>
+                            <th>Fine</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Book Name XYZ</td>
+                            <td>24-10-2016</td>
+                            <td>29-10-2016</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Book Name XYZ</td>
+                            <td>24-10-2016</td>
+                            <td>29-10-2016</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Book Name XYZ</td>
+                            <td>24-10-2016</td>
+                            <td>29-10-2016</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Book Name XYZ</td>
+                            <td>24-10-2016</td>
+                            <td>29-10-2016</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Book Name XYZ</td>
+                            <td>24-10-2016</td>
+                            <td>29-10-2016</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

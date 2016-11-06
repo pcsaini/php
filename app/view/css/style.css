@@ -314,25 +314,39 @@ ul.footerMenu li a{
 }
 
 /*  View Profile*/
-.profile-info{
-    margin: 10px;
-    padding: 10px;
-    background-color: #FFFFFF;
-    border: 1px solid #adadad;
+.profile .profile-info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 10px;
 }
-.profile-info .profile-pic{
+.profile .panel-primary{
+    border-color: #16456c !important;
+}
+.profile .panel-primary .panel-heading{
+    background-color: #16456c !important;
+    border-color: #16456c !important;
+}
+.profile .profile-info .profile-pic{
     text-align: center;
 }
-.profile-info .information{
+.profile .profile-info .information{
     text-align: center;
 }
-.history-info{
-    margin: 10px;
-    padding: 10px;
-    background-color: #FFFFFF;
-    border: 1px solid #adadad;
+.profile .profile-info .information button{
+    background-color:#16456c;
+    color:white;
+    width: 100%
 }
-/*  Profile Setting Page*/
+.profile .history-info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+.profile .table thead{
+    background-color: #16456c;
+    color: #FFFFFF;
+}
+
 .main-heading{
     margin-top: 50px;
     padding: 10px;
@@ -341,4 +355,11 @@ ul.footerMenu li a{
 }
 .main-heading h2{
     color: #FFFFFF;
+}
+.profile .profile-info .profile-pic input[type=file]{
+    margin-top: 20px;
+    padding:10px 0;
+    border: 2px solid #16456c;
+    border-radius: 5px;
+    width:100%;
 }

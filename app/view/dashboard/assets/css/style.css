@@ -257,3 +257,10 @@ body{
     right: 1em; }
 .app-container .content-container .side-menu:hover .panel-collapse.in {
     display: block; }
+
+
+.main-content{
+    margin-top: 60px;
+    margin-left: 60px;
+    padding: 20px;
+}

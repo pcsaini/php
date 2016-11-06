@@ -24,6 +24,7 @@ include_once "navbar.php";
         <div class="search-bar">
             <h3>Search Here!</h3>
             <input type="text" name="search" placeholder="Search..">
+
         </div>
     </div>
 </div>
