@@ -25,7 +25,7 @@ login_redirect();
     <div class="form">
         <h2>Change Password</h2>
         <?php
-        if (isset($_GET['errors']) == true){
+        if (isset($_GET['errors']) == true) {
             $errors = $_GET['errors'];
             ?>
             <p class="errors">
@@ -44,7 +44,8 @@ login_redirect();
             <input type="password" placeholder="New Password" id="password" name="new_password" required/>
             <input type="password" placeholder="Confirm Password" id="password" name="new_password_again" required/>
             <button><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                Change Password</button>
+                Change Password
+            </button>
         </form>
     </div>
 </div>

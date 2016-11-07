@@ -4,7 +4,6 @@
 
 <?php
 if(isset($_POST['set_cat'])) {
-
     $categ_name = $_POST['category'];
     set_category($categ_name);
     Header('Location: ../view/dashboard/book_cat.php');
@@ -13,8 +12,6 @@ if(isset($_POST['set_cat'])) {
 
 if(isset($_POST['set_new_book']))
 {
-
-
     $categ_id= $_POST['cat_id'];
     $book_id= $_POST['book_id'];
     $book_name= $_POST['book_name'];
@@ -25,22 +22,15 @@ if(isset($_POST['set_new_book']))
 
     set_new_book( $categ_id ,$book_id,$book_name,$isbn,$auther,$edition,$no_copy );
     Header('Location: ../view/dashboard/add_book.php');
-
 }
 
 
 if(isset($_POST['set_old_book']))
 {
-
-
-
     $isbn= $_POST['isbn'];
-
     $no_copy= $_POST['copies'];
-
     set_old_book( $isbn,$no_copy );
     Header('Location: ../view/dashboard/add_book.php');
-
 }
 
 

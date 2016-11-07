@@ -329,13 +329,17 @@ ul.footerMenu li a{
 .profile .profile-info .profile-pic{
     text-align: center;
 }
+.profile .profile-info .profile-pic img{
+    height: 200px !important;
+    width: 200px !important;
+}
 .profile .profile-info .information{
     text-align: center;
 }
 .profile .profile-info .information button{
     background-color:#16456c;
     color:white;
-    width: 100%
+    width: 100%;
 }
 .profile .history-info{
     margin-top: 10px;
@@ -356,10 +360,19 @@ ul.footerMenu li a{
 .main-heading h2{
     color: #FFFFFF;
 }
-.profile .profile-info .profile-pic input[type=file]{
-    margin-top: 20px;
+.profile .profile-info #selectImage input[type=file]{
+    margin: 10px 0;
+    width:100%;
+}
+.profile .profile-info #selectImage input[type=submit]{
+    margin: 10px 0;
     padding:10px 0;
     border: 2px solid #16456c;
     border-radius: 5px;
     width:100%;
+}
+.profile .profile-info #selectImage button{
+    background-color:#16456c;
+    color:white;
+    width: 100%;
 }

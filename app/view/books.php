@@ -39,20 +39,19 @@ include '../controller/booksStored.php';
             <?php
             print_r($_SESSION['user_id']);
 
-            $result=booksInTheDatabase() ; //go to ../controller/booksStored.php
-            while($row=mysql_fetch_assoc($result))  {
+            $result = booksInTheDatabase(); //go to ../controller/booksStored.php
+            while ($row = mysql_fetch_assoc($result)) {
 
                 $book_id = $row['book_id'];
                 $book_name = $row['book_name'];
                 $book_author = $row['author'];
                 $edition = $row['edition'];
-                $no_of_copies=$row['no_of_copies'];
+                $no_of_copies = $row['no_of_copies'];
                 ?>
                 <h1><a href="singleBook.php?id=<?php echo $book_id; ?>"><?php echo $book_name; ?></a></h1>
-                <p>Author  <?php echo $book_author; ?></p>
+                <p>Author <?php echo $book_author; ?></p>
                 <p>Edition <?php echo $edition; ?></p>
                 <p>no_of_copies <?php echo $no_of_copies; ?></p>
-
 
 
             <?php } ?>

@@ -13,11 +13,9 @@ $(document).ready(function() {
 });
 /*Ajax Image upload*/
 $(document).ready(function (e) {
-    $("#loading").hide();
     $("#uploadimage").on('submit',(function(e) {
         e.preventDefault();
         $("#message").empty();
-        $("#loading").show();
         $.ajax({
             url: "../controller/upload_image.php", // Url to which the request is send
             type: "POST",             // Type of request to be send, called as method
@@ -27,7 +25,6 @@ $(document).ready(function (e) {
             processData:false,        // To send DOMDocument or non processed data file it is set to false
             success: function(data)   // A function to be called if request succeeds
             {
-                $("#loading").hide();
                 $("#message").html(data);
             }
         });
@@ -42,7 +39,7 @@ $(document).ready(function (e) {
             var match= ["image/jpeg","image/png","image/jpg"];
             if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2])))
             {
-                $('#previewing').attr('src','noimage.png');
+                $('#previewing').attr('src','no-image.png');
                 $("#message").html("<p id='error'>Please Select A valid Image File</p>"+"<h4>Note</h4>"+"<span id='error_message'>Only jpeg, jpg and png Images type allowed</span>");
                 return false;
             }
@@ -58,7 +55,5 @@ $(document).ready(function (e) {
         $("#file").css("color","green");
         $('#image_preview').css("display", "block");
         $('#previewing').attr('src', e.target.result);
-        $('#previewing').attr('width', '250px');
-        $('#previewing').attr('height', '230px');
     };
 });

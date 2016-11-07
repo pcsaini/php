@@ -24,7 +24,7 @@ include_once "navbar.php"
     <div class="form">
         <h2>Reset Password</h2>
         <?php
-        if (isset($_GET['errors']) == true){
+        if (isset($_GET['errors']) == true) {
             $errors = $_GET['errors'];
             ?>
             <p class="errors">
@@ -42,7 +42,8 @@ include_once "navbar.php"
             <input type="password" placeholder="Password" id="password" name="new_password"/>
             <input type="password" placeholder="Confirm Password" id="password" name="new_password_again"/>
             <button><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                 Reset Password</button>
+                Reset Password
+            </button>
         </form>
     </div>
 </div>

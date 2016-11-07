@@ -13,8 +13,8 @@
             <ul class="nav navbar-nav">
                 <li class="active">
                     <a href="index.php">
-                       <span class="icon fa fa-tachometer"></span>
-                       <span class="title">Dashboard</span>
+                        <span class="icon fa fa-tachometer"></span>
+                        <span class="title">Dashboard</span>
                     </a>
                 </li>
                 <li class="panel panel-default dropdown">

@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
     <script src='dashboard/assets/js/jquery-3.1.1.min.js'></script>
-    <script src="js/main.js"></script><script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </head>
 
@@ -27,7 +28,7 @@ login_redirect();
 <div class="main-heading">
     <h2>Edit Profile</h2>
 </div>
-    
+
 <div class="container">
     <div class="row profile">
         <!-- left column -->
@@ -35,18 +36,20 @@ login_redirect();
             <div class="panel panel-primary">
                 <div class="panel-heading text-center">Profile</div>
                 <div class="panel-body">
-                    <form id="uploadimage" action="../controller/upload_image.php" method="post" enctype="multipart/form-data">
+                    <form id="uploadimage" action="../controller/upload_image.php" method="post"
+                          enctype="multipart/form-data">
                         <div class="profile-pic">
-                            <img id="previewing" src="profile_pic/<?php echo $user_data['profile_pic'];?>" class="avatar img-circle img-thumbnail" alt="avatar" style="height: 150px;width: auto;" / >
+                            <img id="previewing" src="profile_pic/<?php echo $user_data['profile_pic']; ?>"
+                                 class="avatar img-circle" alt="Profile-pic" style="height: 150px;width: auto;"
+                            / >
                         </div>
                         <hr id="line">
-                        <div id="selectImage">
-                            <label>Select Your Image</label><br/>
-                            <input type="file" name="file" id="file" required />
-                            <input type="submit" value="Upload" class="submit" />
+                        <div id="selectImage" class="text-center">
+                            <label >Select Your Image</label><br/>
+                            <input type="file" name="file" id="file" required/>
+                            <button type="submit" value="Upload" class="submit btn">Upload Image</button>
                         </div>
                     </form>
-                    <h4 id="loading">loading..</h4>
                     <div id="message"></div>
                 </div>
             </div>
@@ -59,47 +62,57 @@ login_redirect();
                         <div class="form-group">
                             <label class="col-lg-3 control-label">First Name:</label>
                             <div class="col-lg-8">
-                                <input class="form-control" value="<?php echo $user_data['first_name']; ?>" type="text" name="first_name">
+                                <input class="form-control" value="<?php echo $user_data['first_name']; ?>" type="text"
+                                       name="first_name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Last Name:</label>
                             <div class="col-lg-8">
-                                <input class="form-control" value="<?php echo $user_data['last_name'];?>" type="text" name="last_name">
+                                <input class="form-control" value="<?php echo $user_data['last_name']; ?>" type="text"
+                                       name="last_name">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-3 control-label">Username:</label>
                             <div class="col-md-8">
-                                <input class="form-control" value="<?php echo $user_data['username'];?>" type="text" name="user_name" disabled >
+                                <input class="form-control" value="<?php echo $user_data['username']; ?>" type="text"
+                                       name="user_name" disabled>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Email:</label>
                             <div class="col-lg-8">
-                                <input class="form-control" value="<?php echo $user_data['email'];?>" type="text" name="email">
+                                <input class="form-control" value="<?php echo $user_data['email']; ?>" type="text"
+                                       name="email">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-lg-3 control-label">Contact Number:</label>
                             <div class="col-md-8">
-                                <input  value="<?php echo $user_data['contact_number'];?>" type="tel" class="form-control" name="contact_number">
+                                <input value="<?php echo $user_data['contact_number']; ?>" type="tel"
+                                       class="form-control" name="contact_number">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label">Address:</label>
                             <div class="col-md-8">
-                                <textarea rows="4"  class="form-control" name="address"><?php echo $user_data['address'];?></textarea>
+                                <textarea rows="4" class="form-control"
+                                          name="address"><?php echo $user_data['address']; ?></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">
-                                <button type="submit" class="btn-lg" style="background-color:#16456c; color:white" >Save changes </button>
+                                <button type="submit" class="btn-lg" style="background-color:#16456c; color:white">Save
+                                    changes
+                                </button>
                                 <span></span>
-                                <button type="reset" class="btn-lg" style="background-color:#16456c; color:white;" >Cancel </button>
+                                <button type="reset" class="btn-lg" style="background-color:#16456c; color:white;">
+                                    Cancel
+                                </button>
                             </div>
                         </div>
                     </form>

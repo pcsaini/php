@@ -16,8 +16,8 @@
 </head>
 <body>
 <?php
-    include_once "../init.php";
-    include_once "navbar.php";
+include_once "../init.php";
+include_once "navbar.php";
 ?>
 
 <div class="main-content">
@@ -33,7 +33,12 @@
     <div class="container">
         <div class="about">
             <h2 class="text-center">About</h2>
-            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p class="text-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
         <div class="activities">
             <h2 class="text-center">Last Activities</h2>
@@ -72,12 +77,12 @@
 </div>
 
 <?php
-    include_once "footer.php";
+include_once "footer.php";
 ?>
 
-    <script src='dashboard/assets/js/jquery-3.1.1.min.js'></script>
-    <script src='dashboard/assets/js/bootstrap.min.js'></script>
-    <script src='owl-carousel/owl.carousel.min.js'></script>
-    <script src="js/main.js"></script>
+<script src='dashboard/assets/js/jquery-3.1.1.min.js'></script>
+<script src='dashboard/assets/js/bootstrap.min.js'></script>
+<script src='owl-carousel/owl.carousel.min.js'></script>
+<script src="js/main.js"></script>
 </body>
 </html>

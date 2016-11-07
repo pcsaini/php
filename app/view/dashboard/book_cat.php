@@ -14,7 +14,7 @@
 </head>
 <body>
 <?php
-require '../../init.php';
+require '../../database/helper_admin.php';
 ?>
 <div class="app-container">
     <div class="row content-container">
@@ -25,7 +25,7 @@ require '../../init.php';
         ?>
         <div class="main-content">
             <?php
-            $result= view_cat();
+            $result = view_cat();
             echo '<h3 style="color: #003366">';
             echo 'All Category';
             echo '</h3>';
@@ -34,7 +34,7 @@ require '../../init.php';
                 echo '<table style="border: 2px solid #004080" border="1">';
                 echo '<tr>';
 
-                    echo '<td>' .$row['book_category_name'] . '</td>';
+                echo '<td>' . $row['book_category_name'] . '</td>';
 
                 echo '</tr>';
 
@@ -44,47 +44,39 @@ require '../../init.php';
             ?>
 
 
-            <button class="btn-sm" style="background-color: #004080; color: #FFFFFF" id="mybtn" data-toggle="modal" data-target="#Modal1" >Add Category </button>
+            <button class="btn-sm" style="background-color: #004080; color: #FFFFFF" id="mybtn" data-toggle="modal"
+                    data-target="#Modal1">Add Category
+            </button>
             <!----------MODEL----------->
 
-            <div id="Modal1"  role="dialog" class="modal fade col">
+            <div id="Modal1" role="dialog" class="modal fade col">
                 <div class="modal-dialog modal-sm">
 
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><p style="color:red;">&times</p></button>
+                            <button type="button" class="close" data-dismiss="modal"><p style="color:red;">&times</p>
+                            </button>
                             <h4 class="modal-title">Add category</h4>
                         </div>
 
 
-                            <div class="modal-body ">
+                        <div class="modal-body ">
 
-                                <form action="../../controller/add_category.php" method="post">
-                                    <label> Category name:</label>
-                                    <input type="text" name="category" id="category" value=" "/>
-                                    <input type="submit" name="set_cat" value="Set" style="background-color: #004080; color: #FFFFFF"/>
-                                  <!--  <button type="submit"  name="set_cat" class="btn-sm" style="background-color: #004080; color: #FFFFFF" data-dismiss="modal">set</button>-->
+                            <form action="../../controller/add_category.php" method="post">
+                                <label> Category name:</label>
+                                <input type="text" name="category" id="category" value=" "/>
+                                <input type="submit" name="set_cat" value="Set"
+                                       style="background-color: #004080; color: #FFFFFF"/>
+                                <!--  <button type="submit"  name="set_cat" class="btn-sm" style="background-color: #004080; color: #FFFFFF" data-dismiss="modal">set</button>-->
 
-                                </form>
-
-                            </div>
-
+                            </form>
+                        </div>
                     </div>
-
-
                 </div>
-
             </div>
-
-
-
-
-
         </div>
-
     </div>
-
 </div>
 
 

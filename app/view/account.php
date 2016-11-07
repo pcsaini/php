@@ -32,14 +32,16 @@ login_redirect();
                 <div class="panel-heading text-center">Profile</div>
                 <div class="panel-body">
                     <div class="profile-pic">
-                        <img src="profile_pic/<?php echo $user_data['profile_pic'];?>" class="avatar img-circle img-thumbnail" alt="profile_pic" style="height: 150px;width: auto;" / >
+                        <img src="profile_pic/<?php echo $user_data['profile_pic']; ?> ?>" class="avatar img-circle" alt="profile_pic" / >
                     </div>
                     <hr id="line">
                     <div class="information">
                         <h4 class="username"><?php echo $user_data['username']; ?></h4>
-                        <h3 class="full-name"><?php echo $user_data['first_name'],$user_data['last_name']; ?></h3>
+                        <h3 class="full-name"><?php echo $user_data['first_name'], $user_data['last_name']; ?></h3>
                         <p class="mail-id"><?php echo $user_data['email']; ?></p>
-                        <a href="profile.php"><button class="btn">Edit Profile</button></a>
+                        <a href="profile.php">
+                            <button class="btn">Edit Profile</button>
+                        </a>
                     </div>
                 </div>
             </div>

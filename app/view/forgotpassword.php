@@ -24,7 +24,7 @@ include_once "navbar.php"
     <div class="form">
         <h2>Forgot Password</h2>
         <?php
-        if (isset($_GET['errors']) == true){
+        if (isset($_GET['errors']) == true) {
             $errors = $_GET['errors'];
             ?>
             <p class="errors">
@@ -41,7 +41,8 @@ include_once "navbar.php"
         <form action="../controller/forgotpassword.php" method="post">
             <input type="email" placeholder="Email Address" id="email" name="email"/>
             <button><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-                 Submit</button>
+                Submit
+            </button>
         </form>
         <div class="cta"><a href="login.php"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
                 Back to Login</a></div>

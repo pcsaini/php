@@ -23,7 +23,7 @@
         <div class="main-content">
             <form action="add_category.php" method="post">
                 <label>:</label>
-                <input type="text" name="isbn" />
+                <input type="text" name="isbn"/>
                 <label>N</label>
             </form>
 
@@ -31,7 +31,6 @@
 
     </div>
 </div>
-
 
 
 <script src="assets/js/jquery-3.1.1.min.js"></script>
