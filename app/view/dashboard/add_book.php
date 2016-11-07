@@ -18,11 +18,66 @@
         <?php
         include_once "navbar.php";
         include_once "sidebar.php";
+        require '../../database/helper_admin.php';
         //include_once "footer.php";
         ?>
         <div class="main-content container">
-            <button class="btn-lg" name="old_book" data-toggle="modal" data-target="#Modal1"> Increase number of book
-            </button>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Add New Book</div>
+                    <div class="panel-body" style="padding: 10px;">
+                        <form class="form-horizontal" action="../../controller/add_book.php" method="post" role="form">
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="email">Book Category:</label>
+                                <div class="col-sm-8">
+                                    <?php $result = view_cat();?>
+                                    <select class="form-control" id="email" name="cat_name">
+                                        <?php while ($row = mysql_fetch_array($result)) {?>
+                                        <option value="<?php echo $row['book_category_name'] ?>"><?php echo $row['book_category_name'] ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="email">Book Name:</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="email" placeholder="Book Name" name="book_name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="email">ISBN No.:</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="email" placeholder="ISBN No" name="isbn">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="email">Author</label>
+                                <div class="col-sm-8">
+                                    <input type="email" class="form-control" id="email" placeholder="Author" name="auther">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-4" for="email">Edition</label>
+                                <div class="col-sm-8">
+                                    <input type="email" class="form-control" id="email" placeholder="Edition" name="edition">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-8">
+                                    <button type="submit" class="btn btn-default" name="set_new_book">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Add Bock Code</div>
+                    <div class="panel-body">Panel Content</div>
+                </div>
+            </div>
+
 
             <!-------------model class--------------------->
             <div id="Modal1" role="dialog" class="modal fade col">
@@ -35,76 +90,20 @@
                             </button>
                             <h4 class="modal-title">Add Book</h4>
                         </div>
-
-
                         <div class="modal-body ">
 
-                            <form action="../../controller/add_category.php" method="post">
+                            <form action="../../controller/add_book.php" method="post">
                                 <label> ISBN:</label>
                                 <input type="text" name="isbn" value=" "/>
                                 <label> Number of copies:</label>
                                 <input type="nunber" name="copies" value=" "/>
                                 <input type="submit" name="set_old_book" value="Set"
                                        style="background-color: #004080; color: #FFFFFF"/>
-
-
                             </form>
-
                         </div>
-
                     </div>
-
-
                 </div>
-
             </div>
-
-            <!---------------end model class------------------------->
-
-            <h4> Add New Book</h4>
-            <form action="../../controller/add_category.php" method="post" class="form-horizontal" role="form">
-                <div class="form-group">
-                    <label> Category Id:</label>
-                    <input type="text" class="form-control" name="cat_id"/>
-                </div>
-
-                <div class="form-group">
-                    <label> Book Id:</label>
-                    <input type="text" class="form-control" name="book_id"/>
-                </div>
-
-                <div class="form-group">
-                    <label> Book Name:</label>
-                    <input type="text" class="form-control" name="book_name"/>
-                </div>
-
-                <div class="form-group">
-                    <label> ISBN Number:</label>
-                    <input type="text" class="form-control" name="isbn"/>
-
-                </div>
-
-                <div class="form-group">
-                    <label> Auther:</label>
-                    <input type="text" class="form-control" name="auther"/>
-                </div>
-
-                <div class="form-group">
-                    <label> Edition:</label>
-                    <input type="text" class="form-control" name="edition"/>
-                </div>
-
-                <div class="form-group">
-                    <label> Number Of Copies:</label>
-                    <input type="text" class="form-control" name="copy"/>
-                </div>
-
-                <div class="form-group">
-                    <input type="submit" name="set_new_book" value="Set"
-                           style="background-color: #004080; color: #FFFFFF"/>
-                </div>
-            </form>
-
         </div>
 
     </div>

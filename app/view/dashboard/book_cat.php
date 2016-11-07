@@ -24,54 +24,60 @@ require '../../database/helper_admin.php';
         //include_once "footer.php";
         ?>
         <div class="main-content">
-            <?php
-            $result = view_cat();
-            echo '<h3 style="color: #003366">';
-            echo 'All Category';
-            echo '</h3>';
-            while ($row = mysql_fetch_array($result)) {
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Book Category</div>
+                    <div class="panel-body">
+                        <?php $result = view_cat();?>
+                        <table class="table table-bordered table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Sr.No</th>
+                                <th>Book Category Name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $num = 0;
+                            while ($row = mysql_fetch_array($result)) {
 
-                echo '<table style="border: 2px solid #004080" border="1">';
-                echo '<tr>';
+                                ?>
+                            <tr>
+                                <?php $num++; ?>
+                                <th scope="row"><?php echo $num ?></th>
+                                <td><?php echo $row['book_category_name'] ?></td>
 
-                echo '<td>' . $row['book_category_name'] . '</td>';
-
-                echo '</tr>';
-
-                echo '</table>';
-            }
-
-            ?>
-
-
-            <button class="btn-sm" style="background-color: #004080; color: #FFFFFF" id="mybtn" data-toggle="modal"
-                    data-target="#Modal1">Add Category
-            </button>
-            <!----------MODEL----------->
-
-            <div id="Modal1" role="dialog" class="modal fade col">
-                <div class="modal-dialog modal-sm">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><p style="color:red;">&times</p>
-                            </button>
-                            <h4 class="modal-title">Add category</h4>
-                        </div>
-
-
-                        <div class="modal-body ">
-
-                            <form action="../../controller/add_category.php" method="post">
-                                <label> Category name:</label>
-                                <input type="text" name="category" id="category" value=" "/>
-                                <input type="submit" name="set_cat" value="Set"
-                                       style="background-color: #004080; color: #FFFFFF"/>
-                                <!--  <button type="submit"  name="set_cat" class="btn-sm" style="background-color: #004080; color: #FFFFFF" data-dismiss="modal">set</button>-->
-
-                            </form>
-                        </div>
+                            </tr>
+                            <?php }?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Add New category</div>
+                    <div class="panel-body">
+                        <?php
+                        if (isset($_GET['errors']) == true) {
+                            $errors = $_GET['errors'];
+                            ?>
+                            <p class="errors">
+                                <?php
+                                print_r($errors);
+                                ?>
+                            </p>
+                            <?php
+                        }
+                        if (isset($_GET['success']) && empty($_GET['success'])) {
+                            echo "<p>Successfully Add New Book Category</p>";
+                        }
+                        ?>
+                        <form action="../../controller/add_book.php" method="post" class="text-center">
+                            <label> Category name:</label>
+                            <input type="text" name="category" required/><br>
+                            <button type="submit" name="set_cat" value="Set" class="btn">Add</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,10 @@ function view_cat()
     $results = (mysql_query($query));
     return $results;
 }
-
+function category_exists($cat_name){
+    $cat_name = trim($cat_name);
+    return (mysql_result(mysql_query("SELECT COUNT('book_category_id') FROM book_category WHERE  book_category_name= '$cat_name'"), 0) == 1) ? true : false;
+}
 function set_category($cat_name)
 {
     $query = mysql_query("insert into book_category ( book_category_name) values ('$cat_name')");
