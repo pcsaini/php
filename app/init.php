@@ -15,3 +15,9 @@ function protact_page(){
         exit();
     }
 }
+function login_redirect(){
+    if (logged_in() == false){
+        header('Location: login.php');
+        exit();
+    }
+}
