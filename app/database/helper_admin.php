@@ -5,7 +5,7 @@ require 'connect.php';
 
 function view_cat()
 {
-    $query = "select book_category_name  from book_category";
+    $query = "select *  from book_category";
     $results = (mysql_query($query));
     return $results;
 }
@@ -46,4 +46,18 @@ function increment_no_of_copies($book_id,$no_of_copies)
     $no_of_copies++;
     mysql_query("UPDATE books SET `no_of_copies`='$no_of_copies' WHERE book_id=$book_id");
     return $no_of_copies;
+}
+function view_book($cat_id){
+
+    return mysql_query("SELECT * FROM books WHERE book_category_id=$cat_id");
+}
+function view_book_code($book_id){
+    return mysql_query("SELECT * FROM book_code WHERE book_id=$book_id");
+}
+function delete_category($cat_id){
+    mysql_query("DELETE FROM book_category WHERE book_category_id = $cat_id");
+}
+
+function delete_book($book_code){
+    return mysql_query("DELETE FROM book_code WHERE book_code = '$book_code'");
 }

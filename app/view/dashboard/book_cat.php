@@ -47,6 +47,14 @@ require '../../database/helper_admin.php';
                         </button>
                         </div>";
                 }
+                if (isset($_GET['delete_success']) && empty($_GET['delete_success'])) {
+                    echo "<div class='alert alert-success'>
+                            Successfully Delete Book Category
+                            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                        </div>";
+                }
                 ?>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
@@ -59,6 +67,7 @@ require '../../database/helper_admin.php';
                             <tr>
                                 <th>Sr.No</th>
                                 <th>Book Category Name</th>
+                                <th>Delete</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -71,7 +80,7 @@ require '../../database/helper_admin.php';
                                 <?php $num++; ?>
                                 <th scope="row"><?php echo $num ?></th>
                                 <td><?php echo $row['book_category_name'] ?></td>
-
+                                <td><form action="../../controller/book.php?cat_id=<?php echo $row['book_category_id'] ?>" method="post" class="text-center"><button class="btn btn-danger" name="delete_cat" onClick='alert("Are you sure?")'">Delete</button></form></td>
                             </tr>
                             <?php }?>
                             </tbody>
@@ -83,7 +92,7 @@ require '../../database/helper_admin.php';
                 <div class="panel panel-default">
                     <div class="panel-heading">Add New category</div>
                     <div class="panel-body">
-                        <form action="../../controller/add_book.php" method="post" class="text-center">
+                        <form action="../../controller/book.php" method="post" class="text-center">
                             <label> Category name:</label>
                             <input type="text" name="category" required/><br>
                             <button type="submit" name="set_cat" value="Set" class="btn">Add</button>
@@ -94,8 +103,6 @@ require '../../database/helper_admin.php';
         </div>
     </div>
 </div>
-
-
 <script src="assets/js/jquery-3.1.1.min.js"></script>
 <script src='assets/js/bootstrap.min.js'></script>
 <script src="assets/js/app.js"></script>

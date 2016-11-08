@@ -16,7 +16,12 @@ if(empty(isset($_POST['set_cat'])) == false) {
         exit();
     }
 }
-
+if(isset($_POST['delete_cat'])) {
+    $cat_id= $_GET['cat_id'];
+    delete_category($cat_id);
+    Header('Location: ../view/dashboard/book_cat.php?delete_success');
+    exit();
+}
 if(isset($_POST['set_new_book']))
 {
     $cat_name= $_POST['cat_name'];
@@ -25,10 +30,7 @@ if(isset($_POST['set_new_book']))
     $author= $_POST['author'];
     $edition= $_POST['edition'];
     $no_copy= $_POST['copy'];
-
     $book_cat_id = book_cat_id($cat_name);
-
-
     if (book_exists($isbn)){
         Header('Location: ../view/dashboard/add_book.php?errors=Book Already Exists');
         exit();
@@ -69,15 +71,23 @@ if(isset($_POST['add_book_code']))
     die();
 
 }
-
-if(isset($_POST['set_old_book']))
+if(isset($_POST['view_book_list']))
 {
-    $isbn= $_POST['isbn'];
-    $no_copy= $_POST['copies'];
-    set_old_book( $isbn,$no_copy );
-    Header('Location: ../view/dashboard/add_book.php');
+    $category_name = $_POST['cat_name'];
+    $book_cat_id = book_cat_id($category_name);
+    Header("Location: ../view/dashboard/view_book.php?cat_id=$book_cat_id");
+    exit();
+}
+
+if(isset($_POST['delete_book']))
+{
+    $book_code = $_POST['book_code'];
+    delete_book($book_code);
+    Header('Location: ../view/dashboard/view_book.php?success');
+    exit();
 }
 
 
 
 ?>
+

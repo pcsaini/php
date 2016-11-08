@@ -15,6 +15,7 @@
 <body>
 <div class="app-container">
     <div class="row content-container">
+    <div class="row content-container">
         <?php
         include_once "navbar.php";
         include_once "sidebar.php";
@@ -50,12 +51,13 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Add New Book</div>
                     <div class="panel-body" style="padding: 10px;">
-                        <form class="form-horizontal" action="../../controller/add_book.php" method="post" role="form">
+                        <form class="form-horizontal" action="../../controller/book.php" method="post" role="form">
                             <div class="form-group">
                                 <label class="control-label col-sm-4" for="email">Book Category:</label>
                                 <div class="col-sm-8">
                                     <?php $result = view_cat();?>
                                     <select class="form-control" id="email" name="cat_name" required>
+                                        <option value="">Select Category</option>
                                         <?php while ($row = mysql_fetch_array($result)) {?>
                                         <option value="<?php echo $row['book_category_name'] ?>" ><?php echo $row['book_category_name'] ?></option>
                                         <?php } ?>
@@ -99,12 +101,13 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Add Bock Code</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" action="../../controller/add_book.php" method="post" role="form">
+                        <form class="form-horizontal" action="../../controller/book.php" method="post" role="form">
                             <div class="form-group">
                                 <label class="control-label col-sm-4" for="normal">Book Category:</label>
                                 <div class="col-sm-8">
                                     <?php $result = view_cat();?>
                                     <select class="form-control" id="normal" name="cat_name" required>
+                                        <option value="">Select Category</option>
                                         <?php while ($row = mysql_fetch_array($result)) {?>
                                             <option value="<?php echo $row['book_category_name'] ?>" ><?php echo $row['book_category_name'] ?></option>
                                         <?php } ?>
@@ -132,35 +135,7 @@
                     </div>
                 </div>
             </div>
-
-
-            <!-------------model class--------------------->
-            <div id="Modal1" role="dialog" class="modal fade col">
-                <div class="modal-dialog modal-sm">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><p style="color:red;">&times</p>
-                            </button>
-                            <h4 class="modal-title">Add Book</h4>
-                        </div>
-                        <div class="modal-body ">
-
-                            <form action="../../controller/add_book.php" method="post">
-                                <label> ISBN:</label>
-                                <input type="text" name="isbn" value=" "/>
-                                <label> Number of copies:</label>
-                                <input type="nunber" name="copies" value=" "/>
-                                <input type="submit" name="set_old_book" value="Set"
-                                       style="background-color: #004080; color: #FFFFFF"/>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-
     </div>
 </div>
 
