@@ -3,8 +3,10 @@
 require 'connect.php';
 function db_insert($array, $tbname)
 {
+    print_r($tbname);
     $array_keys = array_keys($array);
-    $array_keys = implode(", ", $array_keys);
+    $array_keys = implode("`,`", $array_keys);
+    $array_keys = "`" . $array_keys . "`";
     $array_values = implode("','", $array);
     $array_values = "'" . $array_values . "'";
     return mysql_query("INSERT INTO $tbname ($array_keys) VALUES ($array_values)");
@@ -12,7 +14,7 @@ function db_insert($array, $tbname)
 
 function db_select($select, $tbname, $filter = "")
 {
-    return mysql_result(mysql_query("SELECT $select FROM $tbname $filter"));
+    return mysql_result(mysql_query("SELECT $select FROM $tbname $filter"),1);
 
 }
 /*function exists($tbname,$element,$value){

@@ -77,13 +77,13 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-4" for="email">Author</label>
+                                <label class="control-label col-sm-4" for="email">Author:</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="email" placeholder="Author" name="author" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-4" for="email">Edition</label>
+                                <label class="control-label col-sm-4" for="email">Edition:</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="email" placeholder="Edition" name="edition" required>
                                 </div>

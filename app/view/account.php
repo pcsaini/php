@@ -35,10 +35,13 @@ login_redirect();
                         <img src="profile_pic/<?php echo $user_data['profile_pic']; ?> ?>" class="avatar img-circle" alt="profile_pic" / >
                     </div>
                     <hr id="line">
+                    <h4 class="username text-center"><?php echo $user_data['username']; ?></h4>
                     <div class="information">
-                        <h4 class="username"><?php echo $user_data['username']; ?></h4>
                         <h3 class="full-name"><?php echo $user_data['first_name'], $user_data['last_name']; ?></h3>
                         <p class="mail-id"><?php echo $user_data['email']; ?></p>
+                        <p class="mail-id">Batch: <?php echo $user_data['batch']; ?></p>
+                        <p class="mail-id">Stream: <?php echo $user_data['stream']; ?></p>
+
                         <a href="profile.php">
                             <button class="btn">Edit Profile</button>
                         </a>

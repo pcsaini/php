@@ -42,9 +42,8 @@
                     <div id="dropdown-element1" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul class="nav navbar-nav">
-                                <li><a href="#">Add Student</a></li>
-                                <li><a href="#">View Student</a></li>
-                                <li><a href="#">Remove Student</a></li>
+                                <li><a href="add_student.php">Add Student</a></li>
+                                <li><a href="view_student.php">View Student</a></li>
                             </ul>
                         </div>
                     </div>

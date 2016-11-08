@@ -333,9 +333,6 @@ ul.footerMenu li a{
     height: 200px !important;
     width: 200px !important;
 }
-.profile .profile-info .information{
-    text-align: center;
-}
 .profile .profile-info .information button{
     background-color:#16456c;
     color:white;

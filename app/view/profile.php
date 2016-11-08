@@ -90,6 +90,20 @@ login_redirect();
                             </div>
                         </div>
                         <div class="form-group">
+                            <label class="col-lg-3 control-label">Batch:</label>
+                            <div class="col-md-8">
+                                <input value="<?php echo $user_data['batch']; ?>" type="tel"
+                                       class="form-control" name="contact_number" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Stream:</label>
+                            <div class="col-md-8">
+                                <input value="<?php echo $user_data['stream']; ?>" type="tel"
+                                       class="form-control" name="contact_number" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label class="col-lg-3 control-label">Contact Number:</label>
                             <div class="col-md-8">
                                 <input value="<?php echo $user_data['contact_number']; ?>" type="tel"
