@@ -61,3 +61,6 @@ function delete_category($cat_id){
 function delete_book($book_code){
     return mysql_query("DELETE FROM book_code WHERE book_code = '$book_code'");
 }
+function view_users($batch,$stream){
+    return mysql_query("SELECT * FROM users WHERE batch='$batch' AND stream='$stream'");
+}

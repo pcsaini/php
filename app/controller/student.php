@@ -38,4 +38,12 @@ if (isset($_POST['add_student'])) {
         header("Location: ../view/dashboard/add_student.php?success=successfully add $username");
     }
 }
+
+if (isset($_POST['view_student'])) {
+    $batch = $_POST['batch'];
+    $stream = $_POST['stream'];
+
+    Header("Location: ../view/dashboard/view_student.php?batch=$batch&stream=$stream");
+    exit();
+}
             

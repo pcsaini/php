@@ -102,5 +102,4 @@ function recover_password($email)
     $generate_password = substr(md5(rand(999, 99999)), 0, 8);
     mail($email, 'Reset Password', "Hello " . $username . ",\n Please go to above link to reset password :\n http://library.freeoda.com/app/view/resetpassword.php?email=" . $email . "&generate_password=" . $generate_password . "  \n\n  -Library", 'From:premchandsaini779@gmail.com');
 }
-
 ?>

@@ -23,7 +23,79 @@
             //include_once "footer.php";
             ?>
             <div class="main-content container">
-                Hello
+                <div class="col-lg-12 col-md-16 col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Add New Student</div>
+                        <div class="panel-body" style="padding: 10px;">
+                            <form class="form-horizontal" action="../../controller/student.php" method="post" role="form">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="email">Batch</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="email" name="batch" required>
+                                            <option value="">Select Batch</option>
+                                            <option value="2013" >2013</option>
+                                            <option value="2014" >2014</option>
+                                            <option value="2015" >2015</option>
+                                            <option value="2016" >2016</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" for="email">Stream</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="email" name="stream" required>
+                                            <option value="">Select Stream</option>
+                                            <option value="Computer Sceince Engneering" >Computer Sceince Engneering</option>
+                                            <option value="Information Technology" >Information Technology</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-9">
+                                        <button type="submit" class="btn btn-default" name="view_student">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <?php
+                            if (isset($_GET['batch'],$_GET['stream']) == true) {
+                                $batch = $_GET['batch'];
+                                $stream = $_GET['stream'];
+
+                                $result = view_users($batch,$stream);
+                                ?>
+                                <table class="table table-bordered table-responsive" style="margin-top: 20px;">
+                                    <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Name</th>
+                                        <th>ID</th>
+                                        <th>Email</th>
+                                        <th>View</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    $num = 0;
+                                    while ($row = mysql_fetch_assoc($result)) {
+                                        $user_id= $row['user_id'];
+                                        $num++;
+                                        ?>
+                                        <tr>
+                                            <th scope="row"><?php echo $num; ?></th>
+                                            <td><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></td>
+                                            <td><?php echo $row['username']; ?></td>
+                                            <td><?php echo $row['email']; ?></td>
+                                            <td><a href="single_student.php?id=<?php echo $row['user_id']; ?>"><button class="btn btn-success" name="delete_cat"">View</button></a></td>
+                                            <td><form action="../../controller/book.php?cat_id=<?php echo $row['user_id'] ?>" method="post" class="text-center"><button class="btn btn-danger" name="delete_cat" onClick='alert("Are you sure?")'">Delete</button></form></td>
+                                        </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                </table>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

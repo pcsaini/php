@@ -19,7 +19,7 @@
             <?php
             include_once "navbar.php";
             include_once "sidebar.php";
-            require '../../database/helper_admin.php';
+            require '../../database/helper.php';
             //include_once "footer.php";
             ?>
             <div class="main-content container">
