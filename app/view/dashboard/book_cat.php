@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="assets/image/logo.ico">
     <link rel="shortcut icon" type="image/x-icon" href=assets/image/logo.ico">
-    <title>Dashboard - Home</title>
+    <title>Dashboard - Book</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -23,7 +23,32 @@ require '../../database/helper_admin.php';
         include_once "sidebar.php";
         //include_once "footer.php";
         ?>
-        <div class="main-content">
+        <div class="main-content container">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <?php
+                if (isset($_GET['errors']) == true) {
+                    $errors = $_GET['errors'];
+                    ?>
+                    <div class="alert alert-danger fade in">
+                        <?php
+                        print_r($errors);
+                        ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <?php
+                }
+                if (isset($_GET['success']) && empty($_GET['success'])) {
+                    echo "<div class='alert alert-success'>
+                            Successfully Add New Book Category
+                            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                        </div>";
+                }
+                ?>
+            </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">Book Category</div>
@@ -58,21 +83,6 @@ require '../../database/helper_admin.php';
                 <div class="panel panel-default">
                     <div class="panel-heading">Add New category</div>
                     <div class="panel-body">
-                        <?php
-                        if (isset($_GET['errors']) == true) {
-                            $errors = $_GET['errors'];
-                            ?>
-                            <p class="errors">
-                                <?php
-                                print_r($errors);
-                                ?>
-                            </p>
-                            <?php
-                        }
-                        if (isset($_GET['success']) && empty($_GET['success'])) {
-                            echo "<p>Successfully Add New Book Category</p>";
-                        }
-                        ?>
                         <form action="../../controller/add_book.php" method="post" class="text-center">
                             <label> Category name:</label>
                             <input type="text" name="category" required/><br>

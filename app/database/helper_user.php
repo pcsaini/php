@@ -30,8 +30,7 @@ function insert_into_database_register($user_id, $book_id)
 function check_no_of_copies($book_id)
 {
     $query = "SELECT no_of_copies FROM books WHERE book_id=$book_id";
-    $result = mysql_query($query);
-    return $result;
+    return mysql_result(mysql_query($query),0);
 }
 
 function decrement_no_of_copies($book_id, $no_of_copies)

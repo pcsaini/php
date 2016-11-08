@@ -28,7 +28,7 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="book_cat.php">Book Category</a></li>
                                 <li><a href="add_book.php">Add New Book</a></li>
-                                <li><a href="remove_book.php">Remove Book</a></li>
+                                <li><a href="view_book.php">View Book</a></li>
                             </ul>
                         </div>
                     </div>

@@ -7,19 +7,18 @@ function db_insert($array, $tbname)
     $array_keys = implode(", ", $array_keys);
     $array_values = implode("','", $array);
     $array_values = "'" . $array_values . "'";
-    $query = mysql_query("INSERT INTO $tbname ($array_keys) VALUES ($array_values)");
-    if ($query) {
-        return true;
-    } else {
-        return false;
-    }
+    return mysql_query("INSERT INTO $tbname ($array_keys) VALUES ($array_values)");
 }
 
 function db_select($select, $tbname, $filter = "")
 {
-    $query = mysql_query("SELECT $select FROM $tbname $filter");
-    return $query;
+    return mysql_result(mysql_query("SELECT $select FROM $tbname $filter"));
+
 }
+/*function exists($tbname,$element,$value){
+    $value = strip_tags($value);
+    return (mysql_result(mysql_query("SELECT COUNT('user_id') FROM $tbname WHERE $element = '$value'"), 0) == 1) ? true : false;
+}*/
 
 function user_exists($username)
 {

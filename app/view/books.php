@@ -20,9 +20,7 @@
 <?php
 include_once "../init.php";
 include_once "navbar.php";
-
 include '../controller/booksStored.php';
-
 ?>
 
 <script>
