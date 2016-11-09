@@ -24,9 +24,9 @@ if (logged_in() == 1) { ?>
                                                     aria-hidden="true"></i> <?php echo $user_data['first_name']; ?><span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="account.php">View Profile</a></li>
-                            <li><a href="profile.php">Profile Setting</a></li>
-                            <li><a href="changepassword.php">Change Password</a></li>
+                            <li><a href="profile.php">View Profile</a></li>
+                            <li><a href="edit_profile.php">Profile Setting</a></li>
+                            <li><a href="change_password.php">Change Password</a></li>
                             <li><a href="logout.php">Logout</a></li>
                         </ul>
                     </li>

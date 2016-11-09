@@ -41,7 +41,7 @@ protact_page();
             <input type="password" placeholder="Password" id="password" name="password"/>
             <button type="submit" name="login"><i class="fa fa-sign-in"></i> Login</button>
         </form>
-        <div class="cta"><a href="forgotpassword.php"><i class="fa fa-info-circle"></i> Forgot your password?</a></div>
+        <div class="cta"><a href="forgot_password.php"><i class="fa fa-info-circle"></i> Forgot your password?</a></div>
     </div>
 </div>
 <script src='../dashboard/assets/js/jquery-3.1.1.min.js'></script>

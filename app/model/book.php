@@ -86,7 +86,7 @@ function delete_books($book_id){
 function view_users($batch,$stream){
     return mysql_query("SELECT * FROM users WHERE batch='$batch' AND stream='$stream'");
 }
-function db_select_books_view_books($where)
+function full_view_books($where)
 {
     $where = mysql_real_escape_string($where);
     $query = "SELECT * FROM books $where";
@@ -95,14 +95,14 @@ function db_select_books_view_books($where)
 
 }
 
-function selected_book_by_user($book_id)
+function view_book_by_book_id($book_id)
 {
     $query = "SELECT * FROM books WHERE book_id=$book_id";
     $result = mysql_query($query);
     return $result;
 }
 
-function insert_into_database_register($user_id, $book_id)
+function register_book($user_id, $book_id)
 {
     $query = "INSERT INTO register_book (user_id,book_id,register_status) VALUES  ('$user_id','$book_id','1')";
     $result = mysql_query($query);
@@ -122,10 +122,10 @@ function decrement_no_of_copies($book_id, $no_of_copies)
 
 }
 
-function check_no_of_book_issued_by_student($user_id)
+function no_of_registered_book($user_id)
 {
     $query = "SELECT registered_book FROM users WHERE user_id=$user_id";
-    $result = mysql_query($query);
+    $result = mysql_result(mysql_query($query),0);
     return $result;
 
 }

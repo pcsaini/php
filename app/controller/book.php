@@ -1,7 +1,6 @@
 <?php
     require "../init.php";
 ?>
-
 <?php
 if(empty(isset($_POST['set_cat'])) == false) {
     $category_name= $_POST['category'];
@@ -96,7 +95,7 @@ if(isset($_POST['delete_book']))
 if (isset($_POST['cat_id'])) {
     $cat_id = $_POST['cat_id'];
     $array_values = implode(" OR book_category_id = ", $cat_id);
-    $result1 = db_select_books_view_books("WHERE book_category_id = $array_values");
+    $result1 = full_view_books("WHERE book_category_id = $array_values");
 
     while ($row = mysql_fetch_assoc($result1)) {
 
@@ -106,13 +105,39 @@ if (isset($_POST['cat_id'])) {
         $edition = $row['edition'];
         $no_of_copies = $row['no_of_copies'];
         ?>
-        <h1><a href="singleBook.php?id=<?php echo $book_id; ?>"><?php echo $book_name; ?></a></h1>
-        <p>Author <?php echo $book_author; ?></p>
-        <p>Edition <?php echo $edition; ?></p>
-        <p>no_of_copies <?php echo $no_of_copies; ?></p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3><a href="singleBook.php?id=<?php echo $book_id; ?>"><?php echo $book_name; ?></a></h3>
+                <p>Author <?php echo $book_author; ?></p>
+                <p>Edition <?php echo $edition; ?></p>
+                <p>no_of_copies <?php echo $no_of_copies; ?></p>
+            </div>
+        </div>
         <?php
     }
 }
 
+if (isset($_POST['register_book'])) {
+    $user_id = $_POST['user_id'];
+    $book_id = $_POST['book_id'];
+    $no_of_copy= check_no_of_copies($book_id);
+    $registered_book = no_of_registered_book($user_id);
+
+    if ($no_of_copy > 0 && $registered_book < 2) {
+        decrement_no_of_copies($book_id, $no_of_copy);
+        increment_no_of_registered_book($user_id, $registered_book);
+        register_book($user_id, $book_id);
+        echo "<script type='text/javascript'>
+                    alert('Sucessfull registered for book');
+                    window.location='../view/books.php';
+                </script>";
+    } else {
+        echo "<script type='text/javascript'>
+                    alert('Book Not Available or You have Register 2 Books');
+                    window.location='../view/books.php';
+                </script>";
+    }
+
+}
 ?>
 

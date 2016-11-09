@@ -29,34 +29,34 @@ if (isset($_POST['login'])) {
 if (isset($_POST['change_password'])) {
     if (md5($_POST['current_password']) === $user_data['password']) {
         if (trim($_POST['new_password']) !== trim($_POST['new_password_again'])) {
-            header('Location: ../view/changepassword.php?errors=your possword don\'t match');
+            header('Location: ../view/change_password.php?errors=your possword don\'t match');
         } else if (strlen($_POST['new_password']) < 6) {
-            header('Location: ../view/changepassword.php?errors=please enter min 6 char pass');
+            header('Location: ../view/change_password.php?errors=please enter min 6 char pass');
         } else {
             change_password($user_data['user_id'], $_POST['new_password']);
-            header('Location: ../view/changepassword.php?success');
+            header('Location: ../view/change_password.php?success');
         }
     } else {
-        header('Location: ../view/changepassword.php?errors=Enter Right Password');
+        header('Location: ../view/change_password.php?errors=Enter Right Password');
     }
 }
 if (isset($_POST['forgot_password'])) {
     if (isset($_POST['email']) === true && empty($_POST['email']) === false) {
         if (email_exists($_POST['email']) === true) {
             recover_password($_POST['email']);
-            header('Location: ../view/forgotpassword.php?success');
+            header('Location: ../view/forgot_password.php?success');
             exit();
         } else {
-            header('Location: ../view/forgotpassword.php?errors=Email Address not Found');
+            header('Location: ../view/forgot_password.php?errors=Email Address not Found');
         }
     }
 }
 
 if (isset($_POST['reset_password'])) {
     if (trim($_POST['new_password']) !== trim($_POST['new_password_again'])) {
-        header('Location: ../view/resetpassword.php?errors=your possword don\'t match');
+        header('Location: ../view/reset_password.php?errors=your possword don\'t match');
     } else if (strlen($_POST['new_password']) < 6) {
-        header('Location: ../view/resetpassword.php?errors=please enter min 6 char pass');
+        header('Location: ../view/reset_password.php?errors=please enter min 6 char pass');
     } else {
         if (isset($_GET['email'], $_GET['generate_password']) === true) {
             $email = trim($_GET['email']);
@@ -68,7 +68,7 @@ if (isset($_POST['reset_password'])) {
             if ($login == true) {
                 if (empty($_POST) === false) {
                     change_password($user_id, $_POST['new_password']);
-                    header('Location: ../view/resetpassword.php?success');
+                    header('Location: ../view/reset_password.php?success');
                 }
                 ?>
             <?php }
@@ -76,7 +76,7 @@ if (isset($_POST['reset_password'])) {
             header('Location: index.php');
             exit();
         }
-        header('Location: ../view/resetpassword.php?success');
+        header('Location: ../view/reset_password.php?success');
     }
 }
 if (isset($_POST['update_profile'])) {
@@ -88,7 +88,7 @@ if (isset($_POST['update_profile'])) {
     $address = $_POST['address'];
 
     update_profile($user_id, $first_name, $last_name, $email, $contact_number, $address);
-    header('Location: ../view/profile.php');
+    header('Location: ../view/edit_profile.php');
 
 }
 ?>

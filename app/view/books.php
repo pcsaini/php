@@ -56,7 +56,7 @@ include_once "navbar.php";
                     <?php $result = view_cat();
                     while ($row = mysql_fetch_array($result)) { ?>
                     <div class="radio">
-                        <label><input type="checkbox" value="<?php echo $row['book_category_id']?>" name="cat_id[]" class="sort_rang"><?php echo $row['book_category_name'] ?></label>
+                        <label><input type="checkbox" value="<?php echo $row['book_category_id']?>" name="cat_id[]" class="sort_rang"> <?php echo $row['book_category_name'] ?></label>
                     </div>
                     <?php }?>
 
@@ -68,30 +68,27 @@ include_once "navbar.php";
         <div class="panel panel-default">
             <div class="panel-heading">Search Results</div>
         </div>
+        <div class="ajax_result">
+        <?php $result2 = full_view_books("") ;
+        while ($row = mysql_fetch_assoc($result2)) {
+        $book_id = $row['book_id'];
+        $book_name = $row['book_name'];
+        $book_author = $row['author'];
+        $edition = $row['edition'];
+        $no_of_copies = $row['no_of_copies'];
+        ?>
         <div class="panel panel-default">
             <div class="panel-body">
-                <div class="ajax_result">
-                <?php $result2 = db_select_books_view_books("") ;
-                while ($row = mysql_fetch_assoc($result2)) {
-
-                $book_id = $row['book_id'];
-                $book_name = $row['book_name'];
-                $book_author = $row['author'];
-                $edition = $row['edition'];
-                $no_of_copies = $row['no_of_copies'];
-                ?>
-                    <h1><a href="singleBook.php?id=<?php echo $book_id; ?>"><?php echo $book_name; ?></a></h1>
-                    <p>Author <?php echo $book_author; ?></p>
-                    <p>Edition <?php echo $edition; ?></p>
-                    <p>no_of_copies <?php echo $no_of_copies; ?></p>
-                <?php }?>
-                </div>
+                <h3><a href="single_book.php?book_id=<?php echo $book_id; ?>"><?php echo $book_name; ?></a></h3>
+                <p>Author <?php echo $book_author; ?></p>
+                <p>Edition <?php echo $edition; ?></p>
+                <p>no_of_copies <?php echo $no_of_copies; ?></p>
             </div>
+        </div>
+        <?php }?>
         </div>
     </div>
 </div>
-
-
 
 <?php
 include_once "footer.php";
