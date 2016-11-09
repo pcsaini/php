@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="dashboard/assets/image/logo.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="dashboard/assets/image/logo.ico">
+    <link rel="apple-touch-icon" href="../dashboard/assets/image/logo.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../dashboard/assets/image/logo.ico">
     <title>Library: Home</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="dashboard/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dashboard/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../dashboard/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dashboard/assets/css/font-awesome.min.css">
     <!-- Owl Carousel Assets -->
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
-    <script src='dashboard/assets/js/jquery-3.1.1.min.js'></script>
+    <script src='../dashboard/assets/js/jquery-3.1.1.min.js'></script>
     <script src="js/main.js"></script>
     <script src="js/main.js"></script>
 
@@ -33,7 +33,7 @@ login_redirect();
     <div class="row profile">
         <!-- left column -->
         <div class="col-md-3 col-sm-6 col-xs-12 profile-info">
-            <div class="panel panel-primary">
+            <div class="panel panel-default">
                 <div class="panel-heading text-center">Profile</div>
                 <div class="panel-body">
                     <form id="uploadimage" action="../controller/upload_image.php" method="post"
@@ -47,7 +47,7 @@ login_redirect();
                         <div id="selectImage" class="text-center">
                             <label >Select Your Image</label><br/>
                             <input type="file" name="file" id="file" required/>
-                            <button type="submit" value="Upload" class="submit btn">Upload Image</button>
+                            <button type="submit" value="Upload" class="submit btn btn-info">Upload Image</button>
                         </div>
                     </form>
                     <div id="message"></div>
@@ -55,10 +55,10 @@ login_redirect();
             </div>
         </div>
         <div class="col-md-8 col-sm-6 col-xs-12 history-info">
-            <div class="panel panel-primary">
+            <div class="panel panel-default">
                 <div class="panel-heading">Personal Information</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="../controller/update_profile.php" role="form" method="post">
+                    <form class="form-horizontal" action="../controller/auth.php" role="form" method="post">
                         <div class="form-group">
                             <label class="col-lg-3 control-label">First Name:</label>
                             <div class="col-lg-8">
@@ -120,11 +120,11 @@ login_redirect();
                         <div class="form-group">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">
-                                <button type="submit" class="btn-lg" style="background-color:#16456c; color:white">Save
+                                <button type="submit" class="btn btn-default" name="update_profile">Save
                                     changes
                                 </button>
                                 <span></span>
-                                <button type="reset" class="btn-lg" style="background-color:#16456c; color:white;">
+                                <button type="reset" class="btn btn-danger">
                                     Cancel
                                 </button>
                             </div>
@@ -138,7 +138,7 @@ login_redirect();
 <?php
 include_once "footer.php";
 ?>
-<script src='dashboard/assets/js/bootstrap.min.js'></script>
+<script src='../dashboard/assets/js/bootstrap.min.js'></script>
 <script src='owl-carousel/owl.carousel.min.js'></script>
 </body>
 </html>

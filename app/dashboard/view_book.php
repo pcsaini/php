@@ -16,9 +16,10 @@
 <div class="app-container">
     <div class="row content-container">
         <?php
+        include "init.php";
         include_once "navbar.php";
         include_once "sidebar.php";
-        require '../../database/helper_admin.php';
+
         //include_once "footer.php";
         ?>
         <div class="main-content container">
@@ -35,7 +36,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Book View</div>
                 <div class="panel-body" style="padding: 10px;">
-                    <form class="form-inline" action="../../controller/book.php" method="post" role="form">
+                    <form class="form-inline" action="../controller/book.php" method="post" role="form">
                         <div class="form-group">
                             <label class="control-label" for="email">Book Category: </label>
                             <?php $result = view_cat();?>
@@ -83,7 +84,7 @@
                                 <td><?php echo $row['edition']; ?></td>
                                 <td><?php echo $row['no_of_copies']; ?></td>
                                 <td>
-                                    <form class="form-inline text-center" action="../../controller/book.php?book_id=<?php echo $row['book_id']; ?>&no_of_copy=<?php echo $row['no_of_copies']; ?>" method="post" role="form" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');">
+                                    <form class="form-inline text-center" action="../controller/book.php?book_id=<?php echo $row['book_id']; ?>&no_of_copy=<?php echo $row['no_of_copies']; ?>" method="post" role="form" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');">
                                         <div class="form-group">
                                             <label class="control-label" for="email">Book Code: </label>
                                             <?php $result1 = view_book_code($book_id);?>

@@ -17,9 +17,10 @@
     <div class="row content-container">
         <div class="row content-container">
             <?php
+            include "init.php";
             include_once "navbar.php";
             include_once "sidebar.php";
-            require '../../database/helper_admin.php';
+
             //include_once "footer.php";
             ?>
             <div class="main-content container">
@@ -27,7 +28,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">View Student</div>
                         <div class="panel-body" style="padding: 10px;">
-                            <form class="form-horizontal" action="../../controller/student.php" method="post" role="form">
+                            <form class="form-horizontal" action="../controller/student.php" method="post" role="form">
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="email">Batch</label>
                                     <div class="col-sm-9">
@@ -87,7 +88,7 @@
                                             <td><?php echo $row['username']; ?></td>
                                             <td><?php echo $row['email']; ?></td>
                                             <td><a href="student_profile.php?id=<?php echo $row['user_id']; ?>"><button class="btn btn-success" name="delete_cat"">View</button></a></td>
-                                            <td><form action="../../controller/book.php?cat_id=<?php echo $row['user_id'] ?>" method="post" class="text-center" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');"><button class="btn btn-danger" name="delete_cat" >Delete</button></form></td>
+                                            <td><form action="../controller/book.php?cat_id=<?php echo $row['user_id'] ?>" method="post" class="text-center" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');"><button class="btn btn-danger" name="delete_cat" >Delete</button></form></td>
                                         </tr>
                                     <?php } ?>
                                     </tbody>

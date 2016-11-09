@@ -13,12 +13,10 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
 </head>
 <body>
-<?php
-require '../../database/helper_admin.php';
-?>
 <div class="app-container">
     <div class="row content-container">
         <?php
+        include "init.php";
         include_once "navbar.php";
         include_once "sidebar.php";
         //include_once "footer.php";
@@ -80,7 +78,7 @@ require '../../database/helper_admin.php';
                                 <?php $num++; ?>
                                 <th scope="row"><?php echo $num ?></th>
                                 <td><?php echo $row['book_category_name'] ?></td>
-                                <td><form action="../../controller/book.php?cat_id=<?php echo $row['book_category_id'] ?>" method="post" class="text-center" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');"><button class="btn btn-danger" name="delete_cat">Delete</button></form></td>
+                                <td><form action="../controller/book.php?cat_id=<?php echo $row['book_category_id'] ?>" method="post" class="text-center" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');"><button class="btn btn-danger" name="delete_cat">Delete</button></form></td>
                             </tr>
                             <?php }?>
                             </tbody>
@@ -92,7 +90,7 @@ require '../../database/helper_admin.php';
                 <div class="panel panel-default">
                     <div class="panel-heading">Add New category</div>
                     <div class="panel-body">
-                        <form action="../../controller/book.php" method="post" class="text-center">
+                        <form action="../controller/book.php" method="post" class="text-center">
                             <label> Category name:</label>
                             <input type="text" name="category" required/><br>
                             <button type="submit" name="set_cat" value="Set" class="btn">Add</button>

@@ -2,8 +2,6 @@
 session_start();
 error_reporting(0); //error is disable of mysqli
 include '../init.php';
-include '../controller/booksStored.php';
-
 ?>
 
 <?php

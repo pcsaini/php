@@ -5,7 +5,7 @@
  * Date: 08-11-2016
  * Time: 07:00 PM
  */
-require '../database/helper.php';
+require '../init.php';
 
 if (isset($_POST['add_student'])) {
     $first_name = $_POST['first_name'];
@@ -22,20 +22,20 @@ if (isset($_POST['add_student'])) {
     $password_again = trim($password_again);
 
     if (user_exists($username)) {
-        Header("Location: ../view/dashboard/add_student.php?errors=username already exists");
+        Header("Location: ../dashboard/add_student.php?errors=username already exists");
         exit();
     } else if (email_exists($email)) {
-        Header("Location: ../view/dashboard/add_student.php?errors=Email already exists");
+        Header("Location: ../dashboard/add_student.php?errors=Email already exists");
         exit();
     } else if ($password !== $password_again) {
-        header('Location: ../view/dashboard/add_student.php?errors=Possword don\'t match');
+        header('Location: ../dashboard/add_student.php?errors=Possword don\'t match');
     } else if (strlen($password) < 8) {
-        header('Location: ../view/dashboard/add_student.php?errors=please enter min 6 char password');
+        header('Location: ../dashboard/add_student.php?errors=please enter min 6 char password');
     } else {
         $password = md5($password);
         $data = array("username"=>$username, "password"=>$password, "first_name"=>$first_name, "last_name"=>$last_name, "email"=>$email, "gender"=>$gender, "batch"=>$batch, "stream"=>$stream);
         db_insert($data,"users");
-        header("Location: ../view/dashboard/add_student.php?success=successfully add $username");
+        header("Location: ../dashboard/add_student.php?success=successfully add $username");
     }
 }
 
@@ -43,7 +43,7 @@ if (isset($_POST['view_student'])) {
     $batch = $_POST['batch'];
     $stream = $_POST['stream'];
 
-    Header("Location: ../view/dashboard/view_student.php?batch=$batch&stream=$stream");
+    Header("Location: ../dashboard/view_student.php?batch=$batch&stream=$stream");
     exit();
 }
             

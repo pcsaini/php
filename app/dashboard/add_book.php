@@ -17,9 +17,9 @@
     <div class="row content-container">
     <div class="row content-container">
         <?php
+        include "init.php";
         include_once "navbar.php";
         include_once "sidebar.php";
-        require '../../database/helper_admin.php';
         //include_once "footer.php";
         ?>
         <div class="main-content container">
@@ -51,7 +51,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Add New Book</div>
                     <div class="panel-body" style="padding: 10px;">
-                        <form class="form-horizontal" action="../../controller/book.php" method="post" role="form">
+                        <form class="form-horizontal" action="../controller/book.php" method="post" role="form">
                             <div class="form-group">
                                 <label class="control-label col-sm-4" for="email">Book Category:</label>
                                 <div class="col-sm-8">
@@ -101,7 +101,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Add Bock Code</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" action="../../controller/book.php" method="post" role="form">
+                        <form class="form-horizontal" action="../controller/book.php" method="post" role="form">
                             <div class="form-group">
                                 <label class="control-label col-sm-4" for="normal">Book Category:</label>
                                 <div class="col-sm-8">

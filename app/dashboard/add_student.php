@@ -17,9 +17,10 @@
     <div class="row content-container">
         <div class="row content-container">
             <?php
+            include "init.php";
             include_once "navbar.php";
             include_once "sidebar.php";
-            require '../../database/helper.php';
+
             //include_once "footer.php";
             ?>
             <div class="main-content container">
@@ -51,7 +52,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">Add New Student</div>
                         <div class="panel-body" style="padding: 10px;">
-                            <form class="form-horizontal" action="../../controller/student.php" method="post" role="form">
+                            <form class="form-horizontal" action="../controller/student.php" method="post" role="form">
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="email">First Name</label>
                                     <div class="col-sm-9">

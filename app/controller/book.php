@@ -1,18 +1,16 @@
 <?php
-    require "../database/helper.php";
-    require "../database/helper_admin.php";
-    require "../database/helper_user.php";
+    require "../init.php";
 ?>
 
 <?php
 if(empty(isset($_POST['set_cat'])) == false) {
     $category_name= $_POST['category'];
     if (category_exists($category_name)){
-        Header('Location: ../view/dashboard/book_cat.php?errors=Already Exists, Try Other?');
+        Header('Location: ../dashboard/book_cat.php?errors=Already Exists, Try Other?');
         exit();
     }else{
         set_category($category_name);
-        Header('Location: ../view/dashboard/book_cat.php?success');
+        Header('Location: ../dashboard/book_cat.php?success');
         exit();
     }
 }
@@ -21,7 +19,7 @@ if(isset($_POST['delete_cat'])) {
     delete_category($cat_id);
     delete_category_book($cat_id);
     delete_category_book_code($cat_id);
-    Header('Location: ../view/dashboard/book_cat.php?delete_success');
+    Header('Location: ../dashboard/book_cat.php?delete_success');
     exit();
 }
 if(isset($_POST['set_new_book']))
@@ -34,13 +32,13 @@ if(isset($_POST['set_new_book']))
     $no_copy= $_POST['copy'];
     $book_cat_id = book_cat_id($cat_name);
     if (book_exists($isbn)){
-        Header('Location: ../view/dashboard/add_book.php?errors=Book Already Exists');
+        Header('Location: ../dashboard/add_book.php?errors=Book Already Exists');
         exit();
     }
     else{
         $data = array("book_name"=>$book_name,"isbn_no"=>$isbn,"author"=>$author,"edition"=>$edition,"book_category_id"=>$book_cat_id);
         db_insert($data,"books");
-        Header('Location: ../view/dashboard/add_book.php?success');
+        Header('Location: ../dashboard/add_book.php?success');
         exit();
     }
 }
@@ -53,7 +51,7 @@ if(isset($_POST['add_book_code']))
     $book_id = book_id($isbn,$book_cat_id);
     if ($book_id != null){
         if (book_code_exists($book_code)){
-            Header('Location: ../view/dashboard/add_book.php?errors=Book Code already Exists');
+            Header('Location: ../dashboard/add_book.php?errors=Book Code already Exists');
             exit();
         }
         else{
@@ -61,12 +59,12 @@ if(isset($_POST['add_book_code']))
             db_insert($data,"book_code");
             $no_of_copy= check_no_of_copies($book_id);
             increment_no_of_copies($book_id,$no_of_copy);
-            Header('Location: ../view/dashboard/add_book.php?success');
+            Header('Location: ../dashboard/add_book.php?success');
             exit();
         }
     }
     else{
-        Header('Location: ../view/dashboard/add_book.php?errors=Book Not Found');
+        Header('Location: ../dashboard/add_book.php?errors=Book Not Found');
         exit();
     }
 
@@ -76,7 +74,7 @@ if(isset($_POST['view_book_list']))
 {
     $category_name = $_POST['cat_name'];
     $book_cat_id = book_cat_id($category_name);
-    Header("Location: ../view/dashboard/view_book.php?cat_id=$book_cat_id");
+    Header("Location: ../dashboard/view_book.php?cat_id=$book_cat_id");
     exit();
 }
 
@@ -91,7 +89,7 @@ if(isset($_POST['delete_book']))
     if ($no_of_copy == 0){
         delete_books($book_id);
     }
-    Header('Location: ../view/dashboard/view_book.php?success');
+    Header('Location: ../dashboard/view_book.php?success');
     exit();
 }
 

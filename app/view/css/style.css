@@ -168,7 +168,7 @@ h2{
 }
 
 .navbar-brand{
-    background: url(../dashboard/assets/image/logo_name.png) center / contain no-repeat;
+    background: url(../../dashboard/assets/image/logo_name.png) center / contain no-repeat;
     width: 200px;
 }
 /*.nav>li.active{
@@ -287,44 +287,12 @@ ul.footerMenu li a{
 
 }
 
-/* Books*/
-.search-bar{
-    margin:20px;
-}
-.search-bar h3{
-    font-size: 20px;
-}
-.search-bar input[type=text] {
-    width: 100%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url("../image/searchicon.png");
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-.search-bar input[type=text]:focus {
-    width: 100%;
-}
 
 /*  View Profile*/
 .profile .profile-info{
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0 10px;
-}
-.profile .panel-primary{
-    border-color: #16456c !important;
-}
-.profile .panel-primary .panel-heading{
-    background-color: #16456c !important;
-    border-color: #16456c !important;
 }
 .profile .profile-info .profile-pic{
     text-align: center;
@@ -352,24 +320,19 @@ ul.footerMenu li a{
     margin-top: 50px;
     padding: 10px;
     text-align: center;
-    background-color:#16456c;
 }
 .main-heading h2{
-    color: #FFFFFF;
 }
 .profile .profile-info #selectImage input[type=file]{
     margin: 10px 0;
     width:100%;
 }
-.profile .profile-info #selectImage input[type=submit]{
-    margin: 10px 0;
-    padding:10px 0;
-    border: 2px solid #16456c;
-    border-radius: 5px;
-    width:100%;
+.search-bar{
+    margin: 10px auto;
 }
-.profile .profile-info #selectImage button{
-    background-color:#16456c;
-    color:white;
-    width: 100%;
+.search-box {
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    width:90%;
 }
