@@ -80,7 +80,7 @@ require '../../database/helper_admin.php';
                                 <?php $num++; ?>
                                 <th scope="row"><?php echo $num ?></th>
                                 <td><?php echo $row['book_category_name'] ?></td>
-                                <td><form action="../../controller/book.php?cat_id=<?php echo $row['book_category_id'] ?>" method="post" class="text-center"><button class="btn btn-danger" name="delete_cat" onClick='alert("Are you sure?")'">Delete</button></form></td>
+                                <td><form action="../../controller/book.php?cat_id=<?php echo $row['book_category_id'] ?>" method="post" class="text-center" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');"><button class="btn btn-danger" name="delete_cat">Delete</button></form></td>
                             </tr>
                             <?php }?>
                             </tbody>

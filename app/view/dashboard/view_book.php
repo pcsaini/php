@@ -22,6 +22,16 @@
         //include_once "footer.php";
         ?>
         <div class="main-content container">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <?php
+                    if (isset($_GET['success'])==true) {
+                    echo "<div class='alert alert-success'>Successfully Delete Book
+                        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                    </div>";
+                    }
+                 ?>
             <div class="panel panel-default">
                 <div class="panel-heading">Book View</div>
                 <div class="panel-body" style="padding: 10px;">
@@ -73,7 +83,7 @@
                                 <td><?php echo $row['edition']; ?></td>
                                 <td><?php echo $row['no_of_copies']; ?></td>
                                 <td>
-                                    <form class="form-inline text-center" action="../../controller/book.php" method="post" role="form">
+                                    <form class="form-inline text-center" action="../../controller/book.php?book_id=<?php echo $row['book_id']; ?>&no_of_copy=<?php echo $row['no_of_copies']; ?>" method="post" role="form" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');">
                                         <div class="form-group">
                                             <label class="control-label" for="email">Book Code: </label>
                                             <?php $result1 = view_book_code($book_id);?>

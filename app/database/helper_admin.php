@@ -57,9 +57,17 @@ function view_book_code($book_id){
 function delete_category($cat_id){
     mysql_query("DELETE FROM book_category WHERE book_category_id = $cat_id");
 }
-
+function delete_category_book($cat_id){
+    mysql_query("DELETE FROM books WHERE book_category_id = $cat_id");
+}
+function delete_category_book_code($cat_id){
+    return mysql_query("DELETE FROM book_code WHERE book_category_id = $cat_id");
+}
 function delete_book($book_code){
     return mysql_query("DELETE FROM book_code WHERE book_code = '$book_code'");
+}
+function delete_books($book_id){
+    mysql_query("DELETE FROM books WHERE book_id = $book_id");
 }
 function view_users($batch,$stream){
     return mysql_query("SELECT * FROM users WHERE batch='$batch' AND stream='$stream'");

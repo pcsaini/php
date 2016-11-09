@@ -37,7 +37,7 @@ login_redirect();
                     <hr id="line">
                     <h4 class="username text-center"><?php echo $user_data['username']; ?></h4>
                     <div class="information">
-                        <h3 class="full-name"><?php echo $user_data['first_name'], $user_data['last_name']; ?></h3>
+                        <h3 class="full-name"><?php echo $user_data['first_name']?> <?php echo $user_data['last_name']?></h3>
                         <p class="mail-id"><?php echo $user_data['email']; ?></p>
                         <p class="mail-id">Batch: <?php echo $user_data['batch']; ?></p>
                         <p class="mail-id">Stream: <?php echo $user_data['stream']; ?></p>

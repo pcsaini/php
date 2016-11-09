@@ -25,7 +25,7 @@
             <div class="main-content container">
                 <div class="col-lg-12 col-md-16 col-sm-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Add New Student</div>
+                        <div class="panel-heading">View Student</div>
                         <div class="panel-body" style="padding: 10px;">
                             <form class="form-horizontal" action="../../controller/student.php" method="post" role="form">
                                 <div class="form-group">
@@ -86,8 +86,8 @@
                                             <td><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></td>
                                             <td><?php echo $row['username']; ?></td>
                                             <td><?php echo $row['email']; ?></td>
-                                            <td><a href="single_student.php?id=<?php echo $row['user_id']; ?>"><button class="btn btn-success" name="delete_cat"">View</button></a></td>
-                                            <td><form action="../../controller/book.php?cat_id=<?php echo $row['user_id'] ?>" method="post" class="text-center"><button class="btn btn-danger" name="delete_cat" onClick='alert("Are you sure?")'">Delete</button></form></td>
+                                            <td><a href="student_profile.php?id=<?php echo $row['user_id']; ?>"><button class="btn btn-success" name="delete_cat"">View</button></a></td>
+                                            <td><form action="../../controller/book.php?cat_id=<?php echo $row['user_id'] ?>" method="post" class="text-center" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');"><button class="btn btn-danger" name="delete_cat" >Delete</button></form></td>
                                         </tr>
                                     <?php } ?>
                                     </tbody>

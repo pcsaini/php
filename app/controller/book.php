@@ -19,6 +19,8 @@ if(empty(isset($_POST['set_cat'])) == false) {
 if(isset($_POST['delete_cat'])) {
     $cat_id= $_GET['cat_id'];
     delete_category($cat_id);
+    delete_category_book($cat_id);
+    delete_category_book_code($cat_id);
     Header('Location: ../view/dashboard/book_cat.php?delete_success');
     exit();
 }
@@ -55,7 +57,7 @@ if(isset($_POST['add_book_code']))
             exit();
         }
         else{
-            $data = array("book_id"=>$book_id,"book_code"=>$book_code);
+            $data = array("book_id"=>$book_id,"book_category_id"=>$book_cat_id,"book_code"=>$book_code);
             db_insert($data,"book_code");
             $no_of_copy= check_no_of_copies($book_id);
             increment_no_of_copies($book_id,$no_of_copy);
@@ -69,7 +71,6 @@ if(isset($_POST['add_book_code']))
     }
 
     die();
-
 }
 if(isset($_POST['view_book_list']))
 {
@@ -82,7 +83,14 @@ if(isset($_POST['view_book_list']))
 if(isset($_POST['delete_book']))
 {
     $book_code = $_POST['book_code'];
+    $book_id = $_GET['book_id'];
+    $no_of_copy = $_GET['no_of_copy'];
     delete_book($book_code);
+    decrement_no_of_copies($book_id,$no_of_copy);
+    $no_of_copy = $no_of_copy -1;
+    if ($no_of_copy == 0){
+        delete_books($book_id);
+    }
     Header('Location: ../view/dashboard/view_book.php?success');
     exit();
 }
