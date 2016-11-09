@@ -126,7 +126,8 @@ if (isset($_POST['register_book'])) {
     if ($no_of_copy > 0 && $registered_book < 2) {
         decrement_no_of_copies($book_id, $no_of_copy);
         increment_no_of_registered_book($user_id, $registered_book);
-        register_book($user_id, $book_id);
+        $book_code = pick_book($book_id);
+        register_book($user_id, $book_id, $book_code);
         echo "<script type='text/javascript'>
                     alert('Sucessfull registered for book');
                     window.location='../view/books.php';
@@ -138,6 +139,13 @@ if (isset($_POST['register_book'])) {
                 </script>";
     }
 
+}
+if (isset($_POST['issue_book'])) {
+    $user_id = $_GET['user_id'];
+    $book_id = $_GET['book_id'];
+    $book_code = $_GET['book_code'];
+
+    issue_book($user_id,$book_id,$book_code);
 }
 ?>
 

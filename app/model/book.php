@@ -60,7 +60,7 @@ function view_book($cat_id){
 }
 
 function view_book_code($book_id){
-    return mysql_query("SELECT * FROM book_code WHERE book_id=$book_id");
+    return mysql_query("SELECT * FROM book_code WHERE book_id=$book_id AND register_status = 0");
 }
 
 function delete_category($cat_id){
@@ -102,9 +102,9 @@ function view_book_by_book_id($book_id)
     return $result;
 }
 
-function register_book($user_id, $book_id)
+function register_book($user_id, $book_id,$book_code)
 {
-    $query = "INSERT INTO register_book (user_id,book_id,register_status) VALUES  ('$user_id','$book_id','1')";
+    $query = "INSERT INTO register_book (user_id,book_id,register_status,book_code) VALUES  ('$user_id','$book_id','1','$book_code')";
     $result = mysql_query($query);
 }
 
@@ -139,4 +139,17 @@ function increment_no_of_registered_book($user_id, $registered_book)
 }
 function book_view(){
     return mysql_query("SELECT * FROM books");
+}
+
+function pick_book($book_id){
+    $result = mysql_result(mysql_query("SELECT book_code FROM book_code WHERE register_status = 0 AND book_id =$book_id  ORDER BY RAND() LIMIT 0,1"),0);
+    mysql_query("UPDATE book_code SET register_status = 1 WHERE book_code = '$result'");
+    return $result;
+}
+
+function view_registered_book(){
+    return mysql_query("SELECT * FROM register_book NATURAL JOIN books NATURAL JOIN users NATURAL JOIN book_category WHERE `register_book`.`register_status` = 1 ORDER BY `register_book`.`register_date` DESC");
+}
+function issue_book($user_id,$book_id,$book_code){
+    return mysql_query("INSERT INTO issue_book (user_id,book_id,book_code,issue_status) VALUES  ('$user_id','$book_id','$book_code'),'1'");
 }

@@ -49,9 +49,15 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="requested_book.php">
                         <span class="icon fa fa-book fa-align-right"></span>
                         <span class="title">Requested Books</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="issued_book.php">
+                        <span class="icon fa fa-book fa-align-center"></span>
+                        <span class="title">Issued Books</span>
                     </a>
                 </li>
                 <li>
