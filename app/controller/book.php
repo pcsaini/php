@@ -93,7 +93,26 @@ if(isset($_POST['delete_book']))
     exit();
 }
 
+if (isset($_POST['cat_id'])) {
+    $cat_id = $_POST['cat_id'];
+    $array_values = implode(" OR book_category_id = ", $cat_id);
+    $result1 = db_select_books_view_books("WHERE book_category_id = $array_values");
 
+    while ($row = mysql_fetch_assoc($result1)) {
+
+        $book_id = $row['book_id'];
+        $book_name = $row['book_name'];
+        $book_author = $row['author'];
+        $edition = $row['edition'];
+        $no_of_copies = $row['no_of_copies'];
+        ?>
+        <h1><a href="singleBook.php?id=<?php echo $book_id; ?>"><?php echo $book_name; ?></a></h1>
+        <p>Author <?php echo $book_author; ?></p>
+        <p>Edition <?php echo $edition; ?></p>
+        <p>no_of_copies <?php echo $no_of_copies; ?></p>
+        <?php
+    }
+}
 
 ?>
 

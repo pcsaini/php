@@ -14,7 +14,21 @@
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
     <script src='../dashboard/assets/js/jquery-3.1.1.min.js'></script>
-
+    <script type="text/javascript">
+        $(document).on('change','.sort_rang',function(){
+            var url = "../controller/book.php";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $("#search_form").serialize(),
+                success: function(data)
+                {
+                    $('.ajax_result').html(data);
+                }
+            });
+            return false;
+        });
+    </script>
 </head>
 <body>
 <?php
@@ -30,7 +44,7 @@ include_once "navbar.php";
     <form action="" method="get">
         <div class="search-bar text-center">
             <input class="search-box" type="text" placeholder="Search Book here"/>
-            <button class="btn btn-info" value="Search" type="submit"><span class="fa fa-search"></span> Search</button>
+            <button class="btn btn-info" value="Search" class="sort_rang" type="submit"><span class="fa fa-search"></span> Search</button>
         </div>
     </form>
     <br>
@@ -38,14 +52,14 @@ include_once "navbar.php";
         <div class="panel panel-default">
             <div class="panel-heading">Book Category</div>
             <div class="panel-body">
-                <form>
+                <form id="search_form">
                     <?php $result = view_cat();
                     while ($row = mysql_fetch_array($result)) { ?>
-                    <div class="checkbox">
-                        <label><input type="checkbox" value=""><?php echo $row['book_category_name'] ?></label>
+                    <div class="radio">
+                        <label><input type="checkbox" value="<?php echo $row['book_category_id']?>" name="cat_id[]" class="sort_rang"><?php echo $row['book_category_name'] ?></label>
                     </div>
                     <?php }?>
-                    <button class="btn" type="submit" name="cat_search">Submit</button>
+
                 </form>
             </div>
         </div>
@@ -55,16 +69,10 @@ include_once "navbar.php";
             <div class="panel-heading">Search Results</div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-body">Book</div>
-        </div>
-    </div>
-
-
-            <?php
-            print_r($_SESSION['user_id']);
-
-            $result = booksInTheDatabase(); //go to ../controller/booksStored.php
-            while ($row = mysql_fetch_assoc($result)) {
+            <div class="panel-body">
+                <div class="ajax_result">
+                <?php $result2 = db_select_books_view_books("") ;
+                while ($row = mysql_fetch_assoc($result2)) {
 
                 $book_id = $row['book_id'];
                 $book_name = $row['book_name'];
@@ -72,13 +80,15 @@ include_once "navbar.php";
                 $edition = $row['edition'];
                 $no_of_copies = $row['no_of_copies'];
                 ?>
-                <h1><a href="singleBook.php?id=<?php echo $book_id; ?>"><?php echo $book_name; ?></a></h1>
-                <p>Author <?php echo $book_author; ?></p>
-                <p>Edition <?php echo $edition; ?></p>
-                <p>no_of_copies <?php echo $no_of_copies; ?></p>
-
-
-            <?php } ?>
+                    <h1><a href="singleBook.php?id=<?php echo $book_id; ?>"><?php echo $book_name; ?></a></h1>
+                    <p>Author <?php echo $book_author; ?></p>
+                    <p>Edition <?php echo $edition; ?></p>
+                    <p>no_of_copies <?php echo $no_of_copies; ?></p>
+                <?php }?>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
