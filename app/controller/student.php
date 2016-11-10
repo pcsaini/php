@@ -5,7 +5,7 @@
  * Date: 08-11-2016
  * Time: 07:00 PM
  */
-require '../init.php';
+require '../dashboard/init.php';
 
 if (isset($_POST['add_student'])) {
     $first_name = $_POST['first_name'];
@@ -47,3 +47,8 @@ if (isset($_POST['view_student'])) {
     exit();
 }
             
+if (isset($_POST['delete_student'])){
+    $user_id = $_GET['user_id'];
+    delete_student($user_id);
+    header('Location: ../dashboard/view_student.php?success');
+}

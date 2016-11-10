@@ -3,6 +3,7 @@ session_start();
 
 require "model/auth.php";
 require "model/book.php";
+require "model/student.php";
 
 if (logged_in() === true) {
     $session_user_id = $_SESSION['user_id'];

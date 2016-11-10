@@ -24,6 +24,18 @@
             //include_once "footer.php";
             ?>
             <div class="main-content container">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <?php
+                    if (isset($_GET['success']) && empty($_GET['success'])) {
+                        echo "<div class='alert alert-success'>
+                            Successfully Delete Student
+                            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                        </div>";
+                    }
+                    ?>
+                </div>
                 <div class="col-lg-12 col-md-16 col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">View Student</div>
@@ -62,7 +74,7 @@
                                 $batch = $_GET['batch'];
                                 $stream = $_GET['stream'];
 
-                                $result = view_users($batch,$stream);
+                                $result = view_student($batch,$stream);
                                 ?>
                                 <table class="table table-bordered table-responsive" style="margin-top: 20px;">
                                     <thead>
@@ -87,8 +99,8 @@
                                             <td><?php echo $row['first_name']; ?> <?php echo $row['last_name']; ?></td>
                                             <td><?php echo $row['username']; ?></td>
                                             <td><?php echo $row['email']; ?></td>
-                                            <td><a href="student_profile.php?id=<?php echo $row['user_id']; ?>"><button class="btn btn-success" name="delete_cat"">View</button></a></td>
-                                            <td><form action="../controller/book.php?cat_id=<?php echo $row['user_id'] ?>" method="post" class="text-center" onsubmit="return confirm('Are you sure? Because All Book in this Category are deleted.');"><button class="btn btn-danger" name="delete_cat" >Delete</button></form></td>
+                                            <td><a href="student_profile.php?user_id=<?php echo $row['user_id']; ?>"><button class="btn btn-success" name="delete_cat"">View</button></a></td>
+                                            <td><form action="../controller/student.php?user_id=<?php echo $row['user_id'] ?>" method="post" class="text-center" onsubmit="return confirm('Are you sure?');"><button class="btn btn-danger" name="delete_student" >Delete</button></form></td>
                                         </tr>
                                     <?php } ?>
                                     </tbody>
@@ -100,8 +112,6 @@
             </div>
         </div>
     </div>
-
-
     <script src="assets/js/jquery-3.1.1.min.js"></script>
     <script src='assets/js/bootstrap.min.js'></script>
     <script src="assets/js/app.js"></script>

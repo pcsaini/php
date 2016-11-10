@@ -36,7 +36,7 @@
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Registered Books</div>
+                    <div class="panel-heading">Issued Books</div>
                     <div class="panel-body">
                         <?php $result = view_issued_book();?>
                         <table class="table table-bordered table-responsive">

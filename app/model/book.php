@@ -83,9 +83,6 @@ function delete_books($book_id){
     mysql_query("DELETE FROM books WHERE book_id = $book_id");
 }
 
-function view_users($batch,$stream){
-    return mysql_query("SELECT * FROM users WHERE batch='$batch' AND stream='$stream'");
-}
 function full_view_books($where)
 {
     $where = mysql_real_escape_string($where);
@@ -139,7 +136,8 @@ function increment_no_of_registered_book($user_id, $registered_book)
 }
 function decrement_no_of_registered_book($user_id,$registered_book){
     $registered_book = $registered_book - 1;
-    $query = "UPDATE users SET `registered_book`='$registered_book' WHERE user_id=$user_id";
+    $query = "UPDATE users SET `registered_book`=$registered_book WHERE user_id=$user_id";
+    $result = mysql_query($query);
 }
 
 function book_view(){

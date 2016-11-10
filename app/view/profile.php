@@ -53,6 +53,7 @@ login_redirect();
             <div class="panel panel-default">
                 <div class="panel-heading">Registered Books</div>
                 <div class="panel-body">
+                    <?php $register_book = student_register_book($user_data['user_id']); ?>
                     <table class="table table-bordered table-responsive">
                         <thead>
                         <tr>
@@ -64,13 +65,19 @@ login_redirect();
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Book Name XYZ</td>
-                            <td>24-10-2016</td>
-                            <td>29-10-2016</td>
-                            <td>-</td>
-                        </tr>
+                        <?php
+                        $num = 0;
+                        while ($row = mysql_fetch_array($register_book)){
+                            $num++;
+                            ?>
+                            <tr>
+                                <th scope="row"><?php echo $num; ?></th>
+                                <td><?php echo $row['book_name']?></td>
+                                <td><?php echo $row['register_date']?></td>
+                                <td><?php echo $row['register_date']?></td>
+                                <td>-</td>
+                            </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
                 </div>
@@ -78,6 +85,7 @@ login_redirect();
             <div class="panel panel-default">
                 <div class="panel-heading">Issued Book</div>
                 <div class="panel-body">
+                    <?php $issue_book = student_issue_book($user_data['user_id']); ?>
                     <table class="table table-bordered table-responsive">
                         <thead>
                         <tr>
@@ -89,13 +97,19 @@ login_redirect();
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Book Name XYZ</td>
-                            <td>24-10-2016</td>
-                            <td>29-10-2016</td>
-                            <td>-</td>
-                        </tr>
+                        <?php
+                        $num = 0;
+                        while ($row = mysql_fetch_array($issue_book)){
+                            $num++;
+                            ?>
+                            <tr>
+                                <th scope="row"><?php echo $num; ?></th>
+                                <td><?php echo $row['book_name']?></td>
+                                <td><?php echo $row['issue_date']?></td>
+                                <td><?php echo $row['return_date']?></td>
+                                <td>-</td>
+                            </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
                 </div>
@@ -103,6 +117,7 @@ login_redirect();
             <div class="panel panel-default">
                 <div class="panel-heading">Book History</div>
                 <div class="panel-body">
+                    <?php $history = student_history($user_data['user_id']); ?>
                     <table class="table table-bordered table-responsive">
                         <thead>
                         <tr>
@@ -114,41 +129,19 @@ login_redirect();
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Book Name XYZ</td>
-                            <td>24-10-2016</td>
-                            <td>29-10-2016</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Book Name XYZ</td>
-                            <td>24-10-2016</td>
-                            <td>29-10-2016</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Book Name XYZ</td>
-                            <td>24-10-2016</td>
-                            <td>29-10-2016</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Book Name XYZ</td>
-                            <td>24-10-2016</td>
-                            <td>29-10-2016</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Book Name XYZ</td>
-                            <td>24-10-2016</td>
-                            <td>29-10-2016</td>
-                            <td>-</td>
-                        </tr>
+                        <?php
+                        $num = 0;
+                        while ($row = mysql_fetch_array($history)){
+                            $num++;
+                            ?>
+                            <tr>
+                                <th scope="row"><?php echo $num; ?></th>
+                                <td><?php echo $row['book_name']?></td>
+                                <td><?php echo $row['issue_date']?></td>
+                                <td><?php echo $row['returned_date']?></td>
+                                <td>-</td>
+                            </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
                 </div>

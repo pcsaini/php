@@ -2,7 +2,6 @@
 require '../database/connect.php';
 function db_insert($array, $tbname)
 {
-    print_r($tbname);
     $array_keys = array_keys($array);
     $array_keys = implode("`,`", $array_keys);
     $array_keys = "`" . $array_keys . "`";

@@ -28,21 +28,22 @@
                     <div class="panel panel-default">
                         <div class="panel-heading text-center">Profile</div>
                         <div class="panel-body">
-                            <div class="profile-pic">
-                                <img src="profile_pic/<?php echo $user_data['profile_pic']; ?> ?>" class="avatar img-circle" alt="profile_pic" / >
+                            <?php
+                            if (isset($_GET['user_id'])){
+                                $user_id = $_GET['user_id'];
+                                $student_data = view_student_by_id($user_id); ?>
+                            <div class="profile-pic text-center">
+                                <img src="../view/profile_pic/<?php echo $student_data['profile_pic']; ?> ?>" class="avatar img-circle" alt="profile_pic" / >
                             </div>
                             <hr id="line">
-                            <h4 class="username text-center"><?php echo $user_data['username']; ?></h4>
+                            <h4 class="username text-center"><?php echo $student_data['username']; ?></h4>
                             <div class="information">
-                                <h3 class="full-name"><?php echo $user_data['first_name']?> <?php echo $user_data['last_name']?></h3>
-                                <p class="mail-id"><?php echo $user_data['email']; ?></p>
-                                <p class="mail-id">Batch: <?php echo $user_data['batch']; ?></p>
-                                <p class="mail-id">Stream: <?php echo $user_data['stream']; ?></p>
-
-                                <a href="profile.php">
-                                    <button class="btn">Edit Profile</button>
-                                </a>
+                                <h3 class="full-name"><?php echo $student_data['first_name']?> <?php echo $student_data['last_name']?></h3>
+                                <p class="mail-id"><?php echo $student_data['email']; ?></p>
+                                <p class="mail-id">Batch: <?php echo $student_data['batch']; ?></p>
+                                <p class="mail-id">Stream: <?php echo $student_data['stream']; ?></p>
                             </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -50,6 +51,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">Registered Books</div>
                         <div class="panel-body">
+                            <?php $register_book = student_register_book($_GET['user_id']); ?>
                             <table class="table table-bordered table-responsive">
                                 <thead>
                                 <tr>
@@ -61,13 +63,19 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Book Name XYZ</td>
-                                    <td>24-10-2016</td>
-                                    <td>29-10-2016</td>
-                                    <td>-</td>
-                                </tr>
+                                <?php
+                                $num = 0;
+                                while ($row = mysql_fetch_array($register_book)){
+                                    $num++;
+                                    ?>
+                                    <tr>
+                                        <th scope="row"><?php echo $num; ?></th>
+                                        <td><?php echo $row['book_name']?></td>
+                                        <td><?php echo $row['register_date']?></td>
+                                        <td><?php echo $row['register_date']?></td>
+                                        <td>-</td>
+                                    </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>
@@ -75,6 +83,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">Issued Book</div>
                         <div class="panel-body">
+                            <?php $issue_book = student_issue_book($_GET['user_id']); ?>
                             <table class="table table-bordered table-responsive">
                                 <thead>
                                 <tr>
@@ -86,13 +95,19 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Book Name XYZ</td>
-                                    <td>24-10-2016</td>
-                                    <td>29-10-2016</td>
-                                    <td>-</td>
-                                </tr>
+                                <?php
+                                $num = 0;
+                                while ($row = mysql_fetch_array($issue_book)){
+                                    $num++;
+                                    ?>
+                                    <tr>
+                                        <th scope="row"><?php echo $num; ?></th>
+                                        <td><?php echo $row['book_name']?></td>
+                                        <td><?php echo $row['issue_date']?></td>
+                                        <td><?php echo $row['return_date']?></td>
+                                        <td>-</td>
+                                    </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>
@@ -100,6 +115,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">Book History</div>
                         <div class="panel-body">
+                            <?php $history = student_history($_GET['user_id']); ?>
                             <table class="table table-bordered table-responsive">
                                 <thead>
                                 <tr>
@@ -111,45 +127,24 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Book Name XYZ</td>
-                                    <td>24-10-2016</td>
-                                    <td>29-10-2016</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Book Name XYZ</td>
-                                    <td>24-10-2016</td>
-                                    <td>29-10-2016</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Book Name XYZ</td>
-                                    <td>24-10-2016</td>
-                                    <td>29-10-2016</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Book Name XYZ</td>
-                                    <td>24-10-2016</td>
-                                    <td>29-10-2016</td>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Book Name XYZ</td>
-                                    <td>24-10-2016</td>
-                                    <td>29-10-2016</td>
-                                    <td>-</td>
-                                </tr>
+                                <?php
+                                $num = 0;
+                                while ($row = mysql_fetch_array($history)){
+                                    $num++;
+                                    ?>
+                                    <tr>
+                                        <th scope="row"><?php echo $num; ?></th>
+                                        <td><?php echo $row['book_name']?></td>
+                                        <td><?php echo $row['issue_date']?></td>
+                                        <td><?php echo $row['returned_date']?></td>
+                                        <td>-</td>
+                                    </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
