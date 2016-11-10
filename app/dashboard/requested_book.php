@@ -26,7 +26,7 @@
                 <?php
                 if (isset($_GET['success']) && empty($_GET['success'])) {
                     echo "<div class='alert alert-success'>
-                            Successfully Add New Book Category
+                            Successfully Issue Book
                             <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                             <span aria-hidden=\"true\">&times;</span>
                         </button>
@@ -49,7 +49,7 @@
                                 <th>Book Category</th>
                                 <th>Book Code</th>
                                 <th>Register Date</th>
-                                <th>Delete</th>
+                                <th>Issue</th>
                             </tr>
                             </thead>
                             <tbody>

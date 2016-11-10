@@ -146,8 +146,24 @@ if (isset($_POST['issue_book'])) {
     $book_code = $_GET['book_code'];
 
     issue_book($user_id,$book_id,$book_code);
-    update_register_book($user_id,$book_code);
-    header('Location: ../view/dashboard/requested_book.php?success');
+    update_book_status($user_id,$book_code,"register_book","register_status");
+    header('Location: ../dashboard/requested_book.php?success');
+
+}
+
+if (isset($_POST['return_book'])) {
+    $user_id = $_GET['user_id'];
+    $book_id = $_GET['book_id'];
+    $book_code = $_GET['book_code'];
+    $no_of_copy= check_no_of_copies($book_id);
+    $registered_book = no_of_registered_book($user_id);
+
+    increment_no_of_copies($book_id,$no_of_copy);
+    decrement_no_of_registered_book($user_id,$registered_book);
+    return_book($user_id,$book_id,$book_code);
+    update_book_status($user_id,$book_code,"issue_book","issue_status");
+    update_book_status_in_book_code($book_code);
+    header('Location: ../dashboard/issued_book.php?success');
 
 }
 ?>

@@ -26,7 +26,7 @@
                 <?php
                 if (isset($_GET['success']) && empty($_GET['success'])) {
                     echo "<div class='alert alert-success'>
-                            Successfully Add New Book Category
+                            Successfully Return Book
                             <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
                             <span aria-hidden=\"true\">&times;</span>
                         </button>
@@ -49,7 +49,7 @@
                                 <th>Book Category</th>
                                 <th>Book Code</th>
                                 <th>Issue Date</th>
-                                <th>Delete</th>
+                                <th>Return</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -66,7 +66,7 @@
                                     <td><?php echo $row['book_category_name'] ?></td>
                                     <td><?php echo $row['book_code'] ?></td>
                                     <td><?php echo $row['issue_date'] ?></td>
-                                    <td><form action="../controller/book.php?book_id=<?php echo $row['book_id'] ?>&user_id=<?php echo $row['user_id'] ?>&book_code=<?php echo $row['book_code'] ?>" method="post" class="text-center"><button class="btn btn-success" name="issue_book">Issue</button></form></td>
+                                    <td><form action="../controller/book.php?book_id=<?php echo $row['book_id'] ?>&user_id=<?php echo $row['user_id'] ?>&book_code=<?php echo $row['book_code'] ?>" method="post" class="text-center"><button class="btn btn-success" name="return_book">Return</button></form></td>
                                 </tr>
                             <?php }?>
                             </tbody>
