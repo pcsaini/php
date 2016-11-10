@@ -22,9 +22,59 @@
         //include_once "footer.php";
         ?>
         <div class="main-content container">
-
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <?php
+                if (isset($_GET['success']) && empty($_GET['success'])) {
+                    echo "<div class='alert alert-success'>
+                            Successfully Add New Book Category
+                            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                        </div>";
+                }
+                ?>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Registered Books</div>
+                    <div class="panel-body">
+                        <?php $result = view_issued_book();?>
+                        <table class="table table-bordered table-responsive">
+                            <thead>
+                            <tr>
+                                <th>Sr.No</th>
+                                <th>Student Name</th>
+                                <th>Student ID</th>
+                                <th>Book Name</th>
+                                <th>Book Category</th>
+                                <th>Book Code</th>
+                                <th>Issue Date</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $num = 0;
+                            while ($row = mysql_fetch_array($result)) {
+                                ?>
+                                <tr>
+                                    <?php $num++; ?>
+                                    <th scope="row"><?php echo $num ?></th>
+                                    <td><?php echo $row['first_name'] ?> <?php echo $row['last_name'] ?></td>
+                                    <td><?php echo $row['username'] ?></td>
+                                    <td><?php echo $row['book_name'] ?></td>
+                                    <td><?php echo $row['book_category_name'] ?></td>
+                                    <td><?php echo $row['book_code'] ?></td>
+                                    <td><?php echo $row['issue_date'] ?></td>
+                                    <td><form action="../controller/book.php?book_id=<?php echo $row['book_id'] ?>&user_id=<?php echo $row['user_id'] ?>&book_code=<?php echo $row['book_code'] ?>" method="post" class="text-center"><button class="btn btn-success" name="issue_book">Issue</button></form></td>
+                                </tr>
+                            <?php }?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
 </div>
 

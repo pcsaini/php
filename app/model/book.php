@@ -151,5 +151,11 @@ function view_registered_book(){
     return mysql_query("SELECT * FROM register_book NATURAL JOIN books NATURAL JOIN users NATURAL JOIN book_category WHERE `register_book`.`register_status` = 1 ORDER BY `register_book`.`register_date` DESC");
 }
 function issue_book($user_id,$book_id,$book_code){
-    return mysql_query("INSERT INTO issue_book (user_id,book_id,book_code,issue_status) VALUES  ('$user_id','$book_id','$book_code'),'1'");
+    return mysql_query("INSERT INTO issue_book (user_id,book_id,book_code,issue_status) VALUES  ('$user_id','$book_id','$book_code','1')");
+}
+function view_issued_book(){
+    return mysql_query("SELECT * FROM issue_book NATURAL JOIN books NATURAL JOIN users NATURAL JOIN book_category WHERE `issue_book`.`issue_status` = 1 ORDER BY `issue_book`.`issue_date` DESC");
+}
+function update_register_book($user_id,$book_code){
+    return mysql_query("UPDATE register_book SET register_status =0 WHERE user_id = $user_id AND book_code = '$book_code'");
 }

@@ -146,6 +146,9 @@ if (isset($_POST['issue_book'])) {
     $book_code = $_GET['book_code'];
 
     issue_book($user_id,$book_id,$book_code);
+    update_register_book($user_id,$book_code);
+    header('Location: ../view/dashboard/requested_book.php?success');
+
 }
 ?>
 
