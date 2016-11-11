@@ -36,7 +36,7 @@ if (isset($_POST['change_password'])) {
             header('Location: ../dashboard/change_password.php?errors=please enter min 6 char pass');
         } else {
             admin_change_password($admin_data['admin_id'], $_POST['new_password']);
-            header('Location: ../dashboard/change_password.php?success');
+            header('Location: ../dashboard/index.php?password_success');
         }
     } else {
         header('Location: ../dashboard/change_password.php?errors=Enter Right Password');

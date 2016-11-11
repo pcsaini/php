@@ -22,6 +22,7 @@
 <body>
 <?php
 include_once "../init.php";
+admin_protact_page();
 include_once "navbar.php";
 login_redirect();
 ?>

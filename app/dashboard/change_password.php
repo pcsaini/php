@@ -15,6 +15,7 @@
 <body>
 <?php
 include_once "init.php";
+admin_login_redirect()
 ?>
 <div class="login-logo">
     <img src="assets/image/logo.png">

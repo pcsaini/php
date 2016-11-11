@@ -21,6 +21,19 @@
         include_once "sidebar.php";
         //include_once "footer.php";
     ?>
+        <div class="main-content container">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <?php
+                if (isset($_GET['password_success']) && empty($_GET['password_success'])) {
+                    echo "<div class='alert alert-success'>Password Sucessfully Changed
+                            <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
+                            <span aria-hidden=\"true\">&times;</span>
+                        </button>
+                        </div>";
+                }
+                ?>
+            </div>
+        </div>
     </div>
 </div>
 

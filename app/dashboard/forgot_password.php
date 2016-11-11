@@ -15,6 +15,7 @@
 <body>
 <?php
 include_once "init.php";
+admin_protact_page();
 ?>
 <div class="login-logo">
     <img src="assets/image/logo.png">

@@ -106,7 +106,7 @@ function admin_protact_page()
 function admin_login_redirect()
 {
     if (admin_logged_in() == false) {
-        header('Location: auth.php');
+        header('Location: login.php');
         exit();
     }
 }

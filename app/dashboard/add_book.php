@@ -18,8 +18,11 @@
     <div class="row content-container">
         <?php
         include "init.php";
+        admin_login_redirect();
         include_once "navbar.php";
         include_once "sidebar.php";
+
+
         //include_once "footer.php";
         ?>
         <div class="main-content container">
