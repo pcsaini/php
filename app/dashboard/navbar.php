@@ -59,23 +59,31 @@
                 </ul>
             </li>
             <li class="dropdown profile">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Prem
-                    Chand Saini<span class="caret"></span></a>
-                <ul class="dropdown-menu animated fadeInDown">
-                    <li class="profile-img"><img src="assets/image/logo.png" class="profile-img"></li>
+                <?php if(admin_logged_in()){?>
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                     <?php echo $admin_data['first_name']; ?>
+                     <span class="caret"></span></a>
+                    <ul class="dropdown-menu animated fadeInDown">
+                    <li class="profile-img"><img src="../view/profile_pic/<?php echo $admin_data['admin_pic']; ?>" class="profile-img"></li>
+                    <hr>
                     <li>
                         <div class="profile-info">
-                            <h4 class="username">Prem Chand Saini</h4>
-                            <p>premchandsaini779@gmail.com</p>
+                            <h4 class="username"><?php echo $admin_data['username']; ?></h4>
+                            <p><?php echo $admin_data['email']; ?></p>
                             <div class="btn-group margin-bottom-2x" role="group">
-                                <button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile
-                                </button>
-                                <button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout
-                                </button>
+                                <a href="change_password.php"><button type="button" class="btn btn-default" style="margin: 10px;">Change Password
+                                    </button></a><br>
+                                <a href="profile.php"><button type="button" class="btn btn-default"><i class="fa fa-user"></i> Profile
+                                </button></a>
+                                <a href="logout.php"><button type="button" class="btn btn-default"><i class="fa fa-sign-out"></i> Logout
+                                </button></a>
                             </div>
                         </div>
                     </li>
                 </ul>
+                <?php } else{ ?>
+                    <a href="login.php" role="button" aria-expanded="false">Login</a>
+                <?php } ?>
             </li>
         </ul>
     </div>

@@ -142,7 +142,7 @@ body{
     text-align: center;
 }
 .navbar .dropdown.profile .dropdown-menu li.profile-img {
-    padding: 50px;
+    padding: 20px 50px;
     max-height: 300px;
     overflow: hidden; }
 .navbar .dropdown.profile .dropdown-menu li.profile-img img.profile-img {
@@ -152,7 +152,7 @@ body{
     border: 0;
 }
 .navbar .dropdown.profile .dropdown-menu .profile-info {
-    padding: 15px;
+    padding-bottom: 20px;
 }
 .navbar .dropdown.profile .dropdown-menu .profile-info .username {
     font-size: 1.8em;

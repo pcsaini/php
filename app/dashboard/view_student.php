@@ -90,7 +90,7 @@
                                     <tbody>
                                     <?php
                                     $num = 0;
-                                    while ($row = mysql_fetch_assoc($result)) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
                                         $user_id= $row['user_id'];
                                         $num++;
                                         ?>

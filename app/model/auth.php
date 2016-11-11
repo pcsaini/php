@@ -1,5 +1,5 @@
 <?php
-require '../database/connect.php';
+include '../database/connect.php';
 function db_insert($array, $tbname)
 {
     $array_keys = array_keys($array);
@@ -12,8 +12,7 @@ function db_insert($array, $tbname)
 
 function db_select($select, $tbname, $filter = "")
 {
-    return mysql_result(mysql_query("SELECT $select FROM $tbname $filter"),1);
-
+    return mysqli_result(mysql_query("SELECT $select FROM $tbname $filter"),1);
 }
 
 function user_exists($username)
@@ -75,7 +74,6 @@ function change_password($user_id, $new_password)
 {
     $user_id = (int)$user_id;
     $new_password = md5($new_password);
-
     mysql_query("UPDATE `users` SET `password` = '$new_password' WHERE `user_id` = $user_id");
 }
 
@@ -119,7 +117,7 @@ function protact_page()
 function login_redirect()
 {
     if (logged_in() == false) {
-        header('Location: auth.php');
+        header('Location: login.php');
         exit();
     }
 }

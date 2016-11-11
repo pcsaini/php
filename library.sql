@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `library`
+-- Database: `1230813`
 --
 
 -- --------------------------------------------------------
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `return_book` (
   `user_id` int(100) NOT NULL,
   `book_id` int(100) NOT NULL,
   `book_code` varchar(32) NOT NULL,
-  `issue_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `issue_date` timestamp NOT NULL ,
   `returned_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
