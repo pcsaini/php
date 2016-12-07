@@ -6,4 +6,4 @@
  * Time: 12:45 AM
  */
 
-include "library/function.php";
+echo "view indes";
