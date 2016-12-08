@@ -61,6 +61,7 @@ class auth_model extends DBconfig{
     public function changePassword($password) {
         $user_id = $_SESSION['session_id'];
         $password = mysqli_real_escape_string($this->connection, $password);
+        $password = md5($password);
         $data = array("password"=>$password);
         $result = $this->helper->db_update($data, "users", "WHERE user_id='$user_id'");
         return $result;
