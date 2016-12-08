@@ -11,7 +11,7 @@ class home extends authcheck{
     {
         $this->model = new auth_model();
         $this->authcheck = new authcheck();
-        $this->session_id = $_SESSION['user_id'];
+        $this->session_id = $_SESSION['session_id'];
     }
     public function index(){
         $userdata = $this->model->userDetail();

@@ -12,13 +12,36 @@ class authcheck{
     {
         $this->model = new auth_model();
         $this->helper = new helper();
-    }
-    public function logged_in(){
-        if ($this->model->logged_in()){
-            return true;
+
+        $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        if (isset($_SESSION['session_id'])){
+            $result = $this->model->checkSession($_SESSION['session_id']);
+            if($result) {
+                $this->$result = $result;
+            }
+            else {
+                if($GLOBALS['seourl'] == "false") {
+                    header("Location: ".$GLOBALS['dynamic_url']."login&redirecturl=".$actual_link);
+                    die();
+                }
+                else {
+                    header("Location: ".$GLOBALS['dynamic_url']."login?redirecturl=".$actual_link);
+                    die();
+                }
+            }
         }
         else {
-            return false;
+            if($GLOBALS['seourl'] == "false") {
+                header("Location: ".$GLOBALS['dynamic_url']."login&redirecturl=".$actual_link);
+                die();
+            }
+            else {
+                header("Location: ".$GLOBALS['dynamic_url']."login?redirecturl=".$actual_link);
+                die();
+            };
         }
+
     }
+
+
 }

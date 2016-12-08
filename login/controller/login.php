@@ -33,7 +33,7 @@ class login{
                 $data['errors'] = array(array("username and password don't match"));
             }
         }
-        $data['logged_in'] = false;
+        $data['logged_in'] = "false";
         $data['page_title'] = "Login";
         $data['view_page'] = "users/login.php";
         $data['header'] = $GLOBALS['header'];

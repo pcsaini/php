@@ -22,19 +22,22 @@
             <a href="<?php echo $GLOBALS['base_url'];?>home" class="brand-logo"><?php echo $GLOBALS['website_name']; ?></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">Sass</a></li>
-                <li><a href="#"><?php echo $page_title; ?> hai</a></li>
-                <!-- Dropdown Trigger -->
-
-                <li><a class="dropdown-button" data-activates="dropdown1">Dropdown <i class="fa fa-angle-down"></i></a>
-                    <!-- Dropdown Structure -->
-                    <ul id="dropdown1" class="dropdown-content">
-                        <li><a href="#!">one</a></li>
-                        <li><a href="#!">two</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#!">three</a></li>
-                    </ul>
-                </li>
-
+                <?php
+                    if (isset($_SESSION['session_id'])){ ?>
+                        <li><a class="dropdown-button" data-activates="dropdown1">Dropdown <i class="fa fa-angle-down"></i></a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown1" class="dropdown-content">
+                                <li><a href="#!">one</a></li>
+                                <li><a href="#!">two</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#!">three</a></li>
+                            </ul>
+                        </li>
+                    <?php }
+                    else{ ?>
+                        <li><a href="<?php echo $GLOBALS['base_url']; ?>">Login</a></li>
+                    <?php }
+                ?>
             </ul>
         </div>
     </nav>

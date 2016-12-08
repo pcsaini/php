@@ -6,6 +6,10 @@
  * Time: 3:53 AM
  */
 
-echo "home";
-echo $userdata['usarname'];
+echo "hello ";
+echo $userdata['username'];
+echo "<br>";
+echo $userdata['email'];
+echo "<br>";
+echo $userdata['first_name'];
 ?>
