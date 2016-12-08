@@ -73,6 +73,7 @@ if (file_exists("controller/".$controller.".php")) {
     //Retrieving the variable set in controller and setting them as variable name.
 	if(method_exists($controller, $func)) {
         $var = call_user_func_array(array($functions, $func), $params);
+        print_r($var);
         $keys = array_keys($var);
         foreach($keys as $key) {
             $$key = $var[$key];

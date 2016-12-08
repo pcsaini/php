@@ -38,6 +38,33 @@ class auth_model extends DBconfig{
         }
         return $result;
     }
+    public function forgetPassword($email){
+        $email = mysqli_real_escape_string($this->connection,$email);
+        $temp_id = substr(md5(microtime()),rand(0,26),15);
+        $data = array('temp_id' => $temp_id);
+        $result = $this->helper->db_update($data, "users", "WHERE email='$email'");
+        $resultRaw = $this->helper->db_select("name", "users", "WHERE email='$email'");
+        $user_array = $resultRaw->fetch_assoc();
+        $name = $user_array['name'];
+        $baseurl = $GLOBALS['ep_base_url'];
+
+        if($result) {
+            $subject = "Forgot Password Request";
+            $body = "Hi $name, <br/> Please click the following link for password reset - <br/> ".$baseurl."login/passwordreset/secret/$temp_id <br/> Thanks,";
+            $alertmsg = "Password reset successfully requested, Please check your mail for more details";
+            mail($email,$subject, $body,"premchandsaini779@gmail.com");
+        }
+
+        return $result;
+    }
+
+    public function changePassword($password) {
+        $user_id = $_SESSION['session_id'];
+        $password = mysqli_real_escape_string($this->connection, $password);
+        $data = array("password"=>$password);
+        $result = $this->helper->db_update($data, "users", "WHERE user_id='$user_id'");
+        return $result;
+    }
 
     public function checkSession($session_id) {
         $result = $this->helper->check("users", "WHERE user_id='$session_id' ");
@@ -55,4 +82,8 @@ class auth_model extends DBconfig{
         $result = $resultRaw->fetch_assoc();
         return $result;
     }
+    public function loggedIn(){
+        return (isset($_SESSION['session_id'])) ? true : false;
+    }
+
 }

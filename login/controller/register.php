@@ -48,7 +48,10 @@ class register {
                 $data['errors'] = array_merge($errors,$errors_username,$errors_email,$errors_password);
             }
         }
-
+        if ($this->model->loggedIn() == true){
+            header("location: ".$GLOBALS['dynamic_url']."home");
+            exit();
+        }
         $data['page_title'] = "Register";
         $data['view_page'] = "users/register.php";
         $data['header'] = $GLOBALS['header'];

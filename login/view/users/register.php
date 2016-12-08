@@ -9,7 +9,7 @@
         }
         if (!empty($result)) {
             if($result == 1) {
-                echo "<span class='success'> Successfully Register! </span> <a href='".$GLOBALS['ep_dynamic_url']."dashboard'> Go Back </a>";
+                echo "<span class='success'> Successfully Register! </span> <a href='".$GLOBALS['dynamic_url']."dashboard'> Go Back </a>";
             }
         }
 
@@ -18,7 +18,7 @@
         <form action="<?php echo $GLOBALS['dynamic_url']; ?>register" method="post" class="col s12">
             <div class="row">
                 <div class="input-field col s12">
-                    <input  id="username" name="username" type="text" class="validate" required>
+                    <input  id="username" name="username" type="text" class="validate" value="<?php if(isset($_POST['username'])) { echo $post['username']; } ?>" required>
                     <label for="username">Username</label>
                 </div>
                 <div class="input-field col s12">
@@ -30,15 +30,15 @@
                     <label for="password">Password Again</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="name" name="first_name" type="text" class="validate" required>
+                    <input id="name" name="first_name" type="text" class="validate" value="<?php if(isset($_POST['first_name'])) { echo $post['first_name']; } ?>" required>
                     <label for="name">First Name</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="name" name="last_name" type="text" class="validate" required>
+                    <input id="name" name="last_name" type="text" class="validate" value="<?php if(isset($_POST['last_name'])) { echo $post['last_name']; } ?>" required>
                     <label for="name">Last Name</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="email" name="email" type="email" class="validate" required>
+                    <input id="email" name="email" type="email" class="validate" value="<?php if(isset($_POST['email'])) { echo $post['email']; } ?>" required>
                     <label for="email">Email</label>
                 </div>
                 <div class="input-field col s12">
@@ -46,4 +46,7 @@
                 </div>
             </div>
         </form>
+        <div class="col s12" style="padding-top: 30px;">
+            <div class="col m6">Already have Account <a href="<?php echo $GLOBALS['dynamic_url']; ?>login">login</a></div>
+        </div>
     </div>

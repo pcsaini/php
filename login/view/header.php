@@ -24,13 +24,13 @@
                 <li><a href="#">Sass</a></li>
                 <?php
                     if (isset($_SESSION['session_id'])){ ?>
-                        <li><a class="dropdown-button" data-activates="dropdown1">Dropdown <i class="fa fa-angle-down"></i></a>
+                        <li><a class="dropdown-button" data-activates="dropdown1">User <i class="fa fa-angle-down"></i></a>
                             <!-- Dropdown Structure -->
                             <ul id="dropdown1" class="dropdown-content">
-                                <li><a href="#!">one</a></li>
-                                <li><a href="#!">two</a></li>
+                                <li><a href="<?php echo $GLOBALS['base_url']; ?>login/changePassword">Change Password</a></li>
+                                <li><a href="#!">Setting</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#!">three</a></li>
+                                <li><a href="<?php echo $GLOBALS['base_url']; ?>logout">logout</a></li>
                             </ul>
                         </li>
                     <?php }

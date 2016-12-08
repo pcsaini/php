@@ -33,6 +33,30 @@ class helper extends DBconfig{
         return $result;
     }
 
+    public function db_update($array, $tbname, $where) {
+        $keys = array_keys($array);
+        $set = array();
+        foreach($keys as $key) {
+            $set[] = "$key = '$array[$key]' ";
+        }
+        $set = implode(", ", $set);
+        $query = "UPDATE $tbname SET $set $where";
+        if (mysqli_query($this->connection, $query)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function db_delete($tbname, $where) {
+        $query = "DELETE FROM $tbname $where";
+        if (mysqli_query($this->connection, $query)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function check($tbname,$where){
         $query = "SELECT * FROM $tbname $where";
         $result = mysqli_query($this->connection,$query);
