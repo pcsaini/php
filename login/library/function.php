@@ -93,7 +93,7 @@ else {
 
 if(method_exists($controller, $func)) {
     if($var['view_page'] != "false") {
-        include('view/'.$var['view_page'].'.php');
+        include('view/'.$var['view_page']);
     }
 }
 else {

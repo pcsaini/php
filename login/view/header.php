@@ -19,11 +19,12 @@
     <body>
     <nav>
         <div class="nav-wrapper container">
-            <a href="#!" class="brand-logo">Logo</a>
+            <a href="<?php echo $GLOBALS['base_url'];?>home" class="brand-logo"><?php echo $GLOBALS['website_name']; ?></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
+                <li><a href="#">Sass</a></li>
+                <li><a href="#"><?php echo $page_title; ?> hai</a></li>
                 <!-- Dropdown Trigger -->
+
                 <li><a class="dropdown-button" data-activates="dropdown1">Dropdown <i class="fa fa-angle-down"></i></a>
                     <!-- Dropdown Structure -->
                     <ul id="dropdown1" class="dropdown-content">

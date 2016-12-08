@@ -7,5 +7,5 @@
  */
 
 echo "home";
-
+echo $userdata['usarname'];
 ?>

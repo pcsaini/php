@@ -24,7 +24,8 @@ class login{
             $password = md5($password);
 
             $result = $this->model->login($username,$password);
-            if ($result){
+            if (!$result == false){
+                $_SESSION['id'] = $result;
                 header("Location: ".$GLOBALS['dynamic_url']."home");
                 die();
             }
@@ -32,8 +33,9 @@ class login{
                 $data['errors'] = array(array("username and password don't match"));
             }
         }
+        $data['logged_in'] = false;
         $data['page_title'] = "Login";
-        $data['view_page'] = "users/login";
+        $data['view_page'] = "users/login.php";
         $data['header'] = $GLOBALS['header'];
         $data['footer'] = $GLOBALS['footer'];
 
