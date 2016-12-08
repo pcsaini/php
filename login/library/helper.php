@@ -14,6 +14,19 @@ class helper extends DBconfig{
         $this->connection = $connection->connectToDatabase();
     }
 
+    public function db_insert($array, $tbname) {
+        $array_keys = array_keys($array);
+        $array_keys = implode(", ", $array_keys);
+        $array_values = implode("','", $array);
+        $array_values = "'".$array_values."'";
+        $query = "INSERT INTO $tbname ($array_keys) VALUES ($array_values)";
+        if (mysqli_query($this->connection, $query)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function db_select($select, $tbname, $filter=""){
         $query = "SELECT $select FROM $tbname $filter";
         $result = $this->connection->query($query);
