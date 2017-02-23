@@ -1,0 +1,10 @@
+{
+    "name": "pcsaini/mail",
+    "authors": [
+        {
+            "name": "pcsaini",
+            "email": "premchandsaini779@gmail.com"
+        }
+    ],
+    "require": {}
+}
